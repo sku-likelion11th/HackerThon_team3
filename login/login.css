@@ -1,0 +1,10 @@
+body {
+    background-color: #033075;
+}
+.navbar_menuBtn {
+    display: flex;
+    justify-content: end;
+    color: #f0f4f5;
+    padding: 24px 24px;
+    font-size: 24px;
+}
