@@ -314,5 +314,76 @@ a {
     }
 
     /* main > third */
+    .third img{
+        width:180px;
+        height:180px;
+        margin-left:20px;
+    }
+    .third .third_text{
+        margin-left:20px;
+    }
+    .third .third_text .third_main{
+        font-size:20px;
+    }
+    .third .third_text .third_sub{
+        font-size:14px;
+    }
+    .third .third_text .benefit{
+        width:100px;
+        height:30px;
+    }
+    .third .third_text .benefit .benefit_button{
+        font-size: 14px;
+        margin-left:13px;
+        margin-top:5px;
+    }
 
+    /* main > fourth */
+    .fourth img{
+        margin-left:20px;
+        width:180px;
+        height:180px;
+    }
+    .fourth .fourth_text{
+        margin-left:20px;
+    }
+    .fourth .fourth_text .fourth_main{
+        font-size:20px;
+    }
+    .fourth .fourth_text .fourth_sub{
+        font-size:14px;
+    }
+    .fourth .education{
+        width:100px;
+        height:30px;
+    }
+    .fourth .education .education_button{
+        font-size: 14px;
+        margin-left:25px;
+        margin-top:5px;
+    }
+    /* main > fifth*/
+    .fifth img{
+        margin-left:0px;
+        width:180px;
+        height:180px;
+    }
+    .fifth .fifth_text{
+        margin-left:20px;
+    }
+    .fifth .fifth_main{
+        font-size:20px;
+    }
+    .fifth .fifth_sub{
+        font-size:14px;
+    }
+    .fifth .fifth_text .professor{
+        width:100px;
+        height:30px;
+    }
+    .fifth .fifth_text .professor .professor_button{
+        font-size: 14px;
+        margin-left:25px;
+        margin-top:5px;
+    }
 }
