@@ -96,8 +96,8 @@ a {
     display:flex;
 }
 .second .second_text{
-    padding-top:20px;
-    padding-bottom:20px;
+    margin-top:40px;
+    margin-bottom:20px;
     margin-left:200px;
 }
 .second .second_main1{
@@ -105,11 +105,12 @@ a {
     color:#4D4D4D;
 }
 .second .second_main2{
+    margin-top:-30px;
     font-size:50px;
     color:#033075;
 }
 .second .second_sub{
-    font-size:20px;
+    font-size:18px;
     color:#717171;
 }
 .second .category{
@@ -119,7 +120,7 @@ a {
     border-radius:5px;
     position: relative;
 }
-.second .category .choice{
+.second .category .category_button{
     position:absolute;
     margin-left:20px;
     margin-top:10px;
@@ -132,9 +133,75 @@ a {
 }
 
 /* main > third */
+.third{
+    display:flex;
+    padding-top:10px;
+    margin-bottom:10px;
+}
+.third img{
+    margin-left:200px;
+}
+.third .third_text{
+    margin-left:200px;
+    margin-bottom:10px;
+    padding-top:30px;
+}
+.third .third_text .third_main{
+    font-size:50px;
+}
+.third .third_text .third_sub{
+    font-size:18px;
+    color:#717171;
+}
+.third .third_text .benefit{
+    background-color:#033075;
+    width:150px;
+    height:50px;
+    border-radius:5px;
+    position: relative;
+}
+.third .third_text .benefit .benefit_button{
+    position:absolute;
+    margin-left:20px;
+    margin-top:10px;
+    font-size:20px;
+}
 
+/* main > fourth*/
+.fourth{
+    background-color:#F5F7FA;
+    display:flex;
+    padding-top:10px;
+}
+.fourth img{
+    margin-left:200px;
+}
+.fourth .fourth_text{
+    padding-top:30px;
+    margin-left:155px;
+}
+.fourth .fourth_text .fourth_main{
+    font-size:50px;
+}
+.fourth .fourth_text .fourth_sub{
+    font-size:18px;
+    color:#717171;
+}
+.fourth .education{
+    background-color:#033075;
+    width:150px;
+    height:50px;
+    border-radius:5px;
+    position: relative;
+}
+.fourth .education .education_button{
+    position:absolute;
+    margin-left:35px;
+    margin-top:10px;
+    font-size:20px;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
