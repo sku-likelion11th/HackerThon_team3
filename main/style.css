@@ -71,6 +71,9 @@ a {
 }
 
 /* main */
+.main{
+    white-space: nowrap; /*가로 폭이 줄어들었을 때 자동 줄바꿈이 일어나지 않도록함*/
+}
 .main p{
     color:#4D4D4D;
 }
@@ -172,6 +175,7 @@ a {
     background-color:#F5F7FA;
     display:flex;
     padding-top:10px;
+    padding-bottom:20px;
 }
 .fourth img{
     margin-left:200px;
@@ -196,7 +200,38 @@ a {
 }
 .fourth .education .education_button{
     position:absolute;
-    margin-left:35px;
+    margin-left:40px;
+    margin-top:10px;
+    font-size:20px;
+}
+/* main > fifth */
+.fifth{
+    display:flex;
+}
+.fifth img{
+    margin-left:200px;
+}
+.fifth .fifth_text{
+    margin-left:155px;
+    margin-top:20px;
+}
+.fifth .fifth_main{
+    font-size:50px;
+}
+.fifth .fifth_sub{
+    font-size:18px;
+    color:#717171;
+}
+.fifth .fifth_text .professor{
+    background-color:#033075;
+    width:150px;
+    height:50px;
+    border-radius:5px;
+    position: relative;
+}
+.fifth .fifth_text .professor .professor_button{
+    position:absolute;
+    margin-left:40px;
     margin-top:10px;
     font-size:20px;
 }
@@ -229,13 +264,55 @@ a {
     .navbar_menu.active, .navbar_login.active {
         display: flex;
     }
-
-    .first p{
-        font-size:14px;
+    /* main */
+    .main{
+        white-space: initial;
     }
 
+    /*main > first */
+    .first p{
+        font-size:16px;
+    }
     .first img{
         width:50px;
         margin-top:32px;
     }
+
+    /* main > second */
+    .second{
+        position:relative;
+        flex-direction: column;
+    }
+    .second .second_text{
+        margin-left:20px;
+    }
+    .second .second_text .second_main1{
+        font-size:20px;
+        width:400px
+    }
+    .second .second_text .second_main2{
+        font-size:20px;
+        margin-top:-20px;
+    }
+    .second .second_text .second_sub{
+        font-size:14px;
+    }
+    .second .second_text .category{
+        width:100px;
+        height:30px;
+    }
+    .second .second_text .category .category_button{
+        font-size: 14px;
+        margin-left:13px;
+        margin-top:5px;
+    }
+    .second img{
+        width:220px;
+        margin-top:0px;
+        margin-left:350px;
+        position:absolute;
+    }
+
+    /* main > third */
+
 }
