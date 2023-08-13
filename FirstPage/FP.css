@@ -2,9 +2,9 @@ body {
     background-color: #033075;
 }
 .display-container {
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100vh;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 .headerpart {
     position: relative;
@@ -41,7 +41,7 @@ body {
     margin-left: 220px;
 }
 .loginBtn button {
-    padding: 10px 64px 10px 10px;
+    padding: 10px 90px 10px 10px;
     background-color: #033075;
     color: white;
     border: white solid 2px;
@@ -55,7 +55,7 @@ body {
     margin-left: 220px;
 }
 .notmemberBtn button {
-    padding: 10px 28px 10px 10px;
+    padding: 10px 54px 10px 10px;
     background-color: #033075;
     color: white;
     border: white solid 2px;

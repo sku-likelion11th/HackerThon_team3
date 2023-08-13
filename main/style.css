@@ -71,6 +71,9 @@ a {
 }
 
 /* main */
+.main{
+    white-space: nowrap; /*가로 폭이 줄어들었을 때 자동 줄바꿈이 일어나지 않도록함*/
+}
 .main p{
     color:#4D4D4D;
 }
@@ -96,8 +99,8 @@ a {
     display:flex;
 }
 .second .second_text{
-    padding-top:20px;
-    padding-bottom:20px;
+    margin-top:40px;
+    margin-bottom:20px;
     margin-left:200px;
 }
 .second .second_main1{
@@ -105,11 +108,12 @@ a {
     color:#4D4D4D;
 }
 .second .second_main2{
+    margin-top:-30px;
     font-size:50px;
     color:#033075;
 }
 .second .second_sub{
-    font-size:20px;
+    font-size:18px;
     color:#717171;
 }
 .second .category{
@@ -119,7 +123,7 @@ a {
     border-radius:5px;
     position: relative;
 }
-.second .category .choice{
+.second .category .category_button{
     position:absolute;
     margin-left:20px;
     margin-top:10px;
@@ -132,7 +136,105 @@ a {
 }
 
 /* main > third */
+.third{
+    display:flex;
+    padding-top:10px;
+    margin-bottom:10px;
+}
+.third img{
+    margin-left:200px;
+}
+.third .third_text{
+    margin-left:200px;
+    margin-bottom:10px;
+    padding-top:30px;
+}
+.third .third_text .third_main{
+    font-size:50px;
+}
+.third .third_text .third_sub{
+    font-size:18px;
+    color:#717171;
+}
+.third .third_text .benefit{
+    background-color:#033075;
+    width:150px;
+    height:50px;
+    border-radius:5px;
+    position: relative;
+}
+.third .third_text .benefit .benefit_button{
+    position:absolute;
+    margin-left:20px;
+    margin-top:10px;
+    font-size:20px;
+}
 
+/* main > fourth*/
+.fourth{
+    background-color:#F5F7FA;
+    display:flex;
+    padding-top:10px;
+    padding-bottom:20px;
+}
+.fourth img{
+    margin-left:200px;
+}
+.fourth .fourth_text{
+    padding-top:30px;
+    margin-left:155px;
+}
+.fourth .fourth_text .fourth_main{
+    font-size:50px;
+}
+.fourth .fourth_text .fourth_sub{
+    font-size:18px;
+    color:#717171;
+}
+.fourth .education{
+    background-color:#033075;
+    width:150px;
+    height:50px;
+    border-radius:5px;
+    position: relative;
+}
+.fourth .education .education_button{
+    position:absolute;
+    margin-left:40px;
+    margin-top:10px;
+    font-size:20px;
+}
+/* main > fifth */
+.fifth{
+    display:flex;
+}
+.fifth img{
+    margin-left:200px;
+}
+.fifth .fifth_text{
+    margin-left:155px;
+    margin-top:20px;
+}
+.fifth .fifth_main{
+    font-size:50px;
+}
+.fifth .fifth_sub{
+    font-size:18px;
+    color:#717171;
+}
+.fifth .fifth_text .professor{
+    background-color:#033075;
+    width:150px;
+    height:50px;
+    border-radius:5px;
+    position: relative;
+}
+.fifth .fifth_text .professor .professor_button{
+    position:absolute;
+    margin-left:40px;
+    margin-top:10px;
+    font-size:20px;
+}
 
 @media screen and (max-width: 576px) {
     .navbar {
@@ -162,13 +264,126 @@ a {
     .navbar_menu.active, .navbar_login.active {
         display: flex;
     }
-
-    .first p{
-        font-size:14px;
+    /* main */
+    .main{
+        white-space: initial;
     }
 
+    /*main > first */
+    .first p{
+        font-size:16px;
+    }
     .first img{
         width:50px;
         margin-top:32px;
+    }
+
+    /* main > second */
+    .second{
+        position:relative;
+        flex-direction: column;
+    }
+    .second .second_text{
+        margin-left:20px;
+    }
+    .second .second_text .second_main1{
+        font-size:20px;
+        width:400px
+    }
+    .second .second_text .second_main2{
+        font-size:20px;
+        margin-top:-20px;
+    }
+    .second .second_text .second_sub{
+        font-size:14px;
+    }
+    .second .second_text .category{
+        width:100px;
+        height:30px;
+    }
+    .second .second_text .category .category_button{
+        font-size: 14px;
+        margin-left:13px;
+        margin-top:5px;
+    }
+    .second img{
+        width:220px;
+        margin-top:0px;
+        margin-left:350px;
+        position:absolute;
+    }
+
+    /* main > third */
+    .third img{
+        width:180px;
+        height:180px;
+        margin-left:20px;
+    }
+    .third .third_text{
+        margin-left:20px;
+    }
+    .third .third_text .third_main{
+        font-size:20px;
+    }
+    .third .third_text .third_sub{
+        font-size:14px;
+    }
+    .third .third_text .benefit{
+        width:100px;
+        height:30px;
+    }
+    .third .third_text .benefit .benefit_button{
+        font-size: 14px;
+        margin-left:13px;
+        margin-top:5px;
+    }
+
+    /* main > fourth */
+    .fourth img{
+        margin-left:20px;
+        width:180px;
+        height:180px;
+    }
+    .fourth .fourth_text{
+        margin-left:20px;
+    }
+    .fourth .fourth_text .fourth_main{
+        font-size:20px;
+    }
+    .fourth .fourth_text .fourth_sub{
+        font-size:14px;
+    }
+    .fourth .education{
+        width:100px;
+        height:30px;
+    }
+    .fourth .education .education_button{
+        font-size: 14px;
+        margin-left:25px;
+        margin-top:5px;
+    }
+    /* main > fifth*/
+    .fifth img{
+        margin-left:0px;
+        width:180px;
+        height:180px;
+    }
+    .fifth .fifth_text{
+        margin-left:20px;
+    }
+    .fifth .fifth_main{
+        font-size:20px;
+    }
+    .fifth .fifth_sub{
+        font-size:14px;
+    }
+    .fifth .fifth_text .professor{
+        width:100px;
+        height:30px;
+    }
+    .fifth .fifth_text .professor .professor_button{
+        font-size: 14px;
+        margin-left:25px;
+        margin-top:5px;
     }
 }
