@@ -7,8 +7,10 @@
 .gangwon-font {
     font-family: 'GangwonState', sans-serif;
 }
-body{
+.display-container{
     margin: 0;
+    width: 100%;
+    height: 100%;
 }
 a {
     text-decoration: none;
@@ -132,7 +134,7 @@ a {
 .second img{
     width:600px;
     margin:-60px;
-    margin-left:300px;
+    margin-left:150px;
 }
 
 /* main > third */
@@ -309,7 +311,7 @@ a {
     .second img{
         width:220px;
         margin-top:0px;
-        margin-left:350px;
+        margin-left: 338px;
         position:absolute;
     }
 
@@ -367,6 +369,7 @@ a {
         margin-left:0px;
         width:180px;
         height:180px;
+        margin-right: 20px;
     }
     .fifth .fifth_text{
         margin-left:20px;

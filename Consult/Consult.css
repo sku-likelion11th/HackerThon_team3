@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'GangwonState';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.gangwon-font {
+    font-family: 'GangwonState', sans-serif;
+}
+.display-container{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: #f0f4f5;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #033075;
+    padding: 8px 12px;
+}
+.navbar_logo {
+    font-size: 20px;
+    color: #f0f4f5;
+}
+.navbar_logo i{
+    color: #d49466;/* 색상 설정하기 */
+}
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.navbar_menu li {
+    padding: 8px 12px;
+}
+.navbar_menu li:hover {
+    background-color: #f0f4f5;
+    border-radius: 4px;
+    color: #033075;
+}
+.navbar_login {
+    list-style: none;
+    color: #f0f4f5;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.navbar_login:hover {
+    background-color: #f0f4f5;
+    border-radius: 4px;
+    color: #033075;
+    padding: 8px 4px;
+}
+.navbar_login i{
+    padding-left: 5px;
+}
+.navbar_toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 20px;
+    color: #d49466  ;
+}
+.navbar_toggleBtn:hover i:hover {
+    color: #f0f4f5;
+}
+
+/* Header section */
+.header_section {
+    background-color: #f5f7fa;
+}
+.header p {
+    font-size: 24px;
+    margin: 8px;
+}
+.header_line {
+    border-top: 1px black solid;
+}
+input::placeholder {
+    font-size: 12px;
+    padding-left: 10px;
+    color: #9d9d9d;
+}
+.search_section {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.search_bar {
+    display: flex;
+    position: absolute;
+    margin-right: 155px;
+}
+.search_bar input {
+    width:250px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    border: 2px solid #9d9d9d;
+}
+.searchBtn {
+    display: flex;
+    position: absolute;
+    margin-left: 140px;
+}
+.searchBtn button {
+    background-color: #f2f2f2;
+    border: 2px solid #9d9d9d;
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.searchBtn i {
+    color: #9d9d9d;
+    padding: px;
+}
+.categoryBtn {
+    width: 70px;   
+    height: 45px;
+    display: flex;
+    position: absolute;
+    background-color: #f2f2f2;
+    border: 2px solid #9d9d9d;
+    margin-left: 255px;
+    border-radius: 5px;
+}
+.categoryBtn button {
+    color: #9d9d9d;
+    padding-top: 12px;
+    padding-left: 12px;
+    font-size: 12px;
+    border: none;
+}
+.consult_img {
+    margin-left: 1250px;
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    margin-top: -30px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_login {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_toggleBtn{
+        display: block;
+    }
+    .navbar_menu.active, .navbar_login.active {
+        display: flex;
+    }
+}
