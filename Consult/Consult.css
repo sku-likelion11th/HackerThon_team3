@@ -130,29 +130,13 @@ input::placeholder {
     color: #9d9d9d;
     padding: px;
 }
-.categoryBtn {
-    width: 70px;   
-    height: 45px;
-    display: flex;
-    position: absolute;
-    background-color: #f2f2f2;
-    border: 2px solid #9d9d9d;
-    margin-left: 255px;
-    border-radius: 5px;
-}
-.categoryBtn button {
-    color: #9d9d9d;
-    padding-top: 12px;
-    padding-left: 12px;
-    font-size: 12px;
-    border: none;
-}
 .consult_img {
     margin-left: 850px;
     width: 250px;
     height: 250px;
     margin-top: -30px;
 }
+/* category section */
 .category{
     display:flex;
 }
@@ -191,6 +175,7 @@ input::placeholder {
     width: 120px;
     height: 47px;
 }
+/* consult list */
 .consult_list a .header {
     color: black;
     font-size: 30px;
