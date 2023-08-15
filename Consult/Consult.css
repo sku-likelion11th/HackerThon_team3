@@ -39,6 +39,8 @@ a {
 .navbar_menu li:hover {
     background-color: #f0f4f5;
     border-radius: 4px;
+}
+.navbar_menu li:hover > a {
     color: #033075;
 }
 .navbar_login {
@@ -177,7 +179,7 @@ input::placeholder {
 }
 .writeBtn button {
     color: white;
-    padding-left: 9px;
+    padding-left: 5px;
     background-color: #033075;
     font-size: 16px;
     border: 1px solid white;
@@ -185,7 +187,14 @@ input::placeholder {
     width: 120px;
     height: 47px;
 }
-
+.question_box {
+    border: 1px solid #033075;
+    border-radius: 15px;
+    width: 1200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
 
 
 @media screen and (max-width: 576px) {
