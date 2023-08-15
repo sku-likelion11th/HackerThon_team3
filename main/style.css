@@ -39,6 +39,8 @@ a {
 .navbar_menu li:hover {
     background-color: #f0f4f5;
     border-radius: 4px;
+}
+.navbar_menu li:hover > a {
     color: #033075;
 }
 .navbar_login {
