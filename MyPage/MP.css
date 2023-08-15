@@ -8,7 +8,7 @@
     font-family: 'GangwonState', sans-serif;
 }
 .display-container{
-    margin: 0;
+    margin: auto;
     max-width: 1200px;   
     margin-left: auto;
     margin-right: auto;
@@ -190,10 +190,28 @@ a {
   
   /* Style the tab content */
   .tabcontent {
-    display: none;
+    display: none; 
     padding: 6px 12px;
     border: none;
-    border-top: none;
     width: 1200px;
     margin-left: 160px;
+  }
+  .tablist .inheader{
+    width:200px;
+    padding:0 5px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+  .tabcontent p {
+    margin-top: 10px;
+    margin-left: 15px;
+  }
+  .tabcontent .incontent {
+    margin-left: 150px;
+    width:70px;
+    padding:0 5px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
   }
