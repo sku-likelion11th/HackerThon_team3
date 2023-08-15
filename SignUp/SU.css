@@ -3,7 +3,7 @@ body {
     background-color: #033075;
 }
 .display-container{
-    margin: 0;
+    margin: auto;
     max-width: 1200px;   
     margin-left: auto;
     margin-right: auto;
@@ -38,11 +38,16 @@ body {
 .SignUpBtn button {
     padding: 10px 80px 10px 15px;
     background-color: #033075;
-    color: white;
     border: white solid 2px;
-    font-size: 18px;
-    font-weight: 600;
+
     margin-top: 400px;
+    width:260px;
+}
+.SignUpBtn button a{
+    text-decoration: none;
+    color:white;
+    font-size:18px;
+    font-weight: 600;
 }
 .notmemberBtn {
     display: flex;
@@ -52,14 +57,22 @@ body {
 .notmemberBtn button {
     padding: 10px 70px 10px 15px;
     background-color: #033075;
-    color: white;
     border: white solid 2px;
-    font-size: 18px;
-    font-weight: 600;
+    
     margin-top: 15px;
+    width: 260px;
+}
+.notmemberBtn button a{
+    text-decoration: none;
+    font-size:18px;
+    color:white;
+    font-weight:600;
 }
 button:hover {
-    color: #033075;
+    cursor: default;
+}
+button a:hover{
+    color:#033075;
     background-color: white;
 }
 /* tool-part */
@@ -202,4 +215,66 @@ input::placeholder {
 }
 .tool_icon div {
     margin: 0 5px 0 5px;
+}
+
+.signBtn{
+    display:none;
+}
+
+@media screen and (max-width: 576px) {
+    .login_header{
+        margin-top:5px;
+        margin-left:140px;
+        z-index: 1;
+    }
+    .login_header .logo{
+        width:230px;
+        content: url('../img/tool_logo.png');
+    }
+    /* tool-part */
+    .login_border{
+        left:115px;
+        top:105px;
+    }
+    .tool_header p{
+        margin-top:60px;
+    }
+    .tool_checkbox span{
+        font-size:12px;
+    }
+    .tool_loginBtn{
+        margin-top:10px;
+    }
+
+    /* display none >> login_subheader */
+    .login_subheader{
+        display:none;
+    }
+
+    /* display none >> signup btn */
+    .SignUpBtn{
+        display:none;
+    }
+    .notmemberBtn{
+        display:none;
+    }
+
+    
+    /*new sign*/
+    .signBtn{
+        display:flex;
+        flex-direction: column;    
+        text-align: center;  
+        margin-top:10px;
+    }
+    .signBtn p a{
+        text-decoration: none;
+        font-size:14px;
+        color:white;
+    }
+    .signBtn p a:active{
+        text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+        
+    }
+
 }
