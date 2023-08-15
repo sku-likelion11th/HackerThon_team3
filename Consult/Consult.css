@@ -72,6 +72,7 @@ a {
 /* Header section */
 .header_section {
     background-color: #f5f7fa;
+    margin-top: 65px;
 }
 .header p {
     font-size: 32px;
