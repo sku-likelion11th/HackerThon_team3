@@ -24,7 +24,7 @@ a {
     padding: 8px 12px;
 }
 .navbar_logo img {
-    width: 120px;
+    width: 130px;
     height: 25px;
 }
 .navbar_menu {
@@ -168,6 +168,22 @@ input::placeholder {
     margin:23px 11px 0 0;
     padding: 0 8px;
     border-radius: 5px;
+}
+.writeBtn {
+    display: flex;
+    position: absolute;
+    top: 365px;
+    right: 110px; 
+}
+.writeBtn button {
+    color: white;
+    padding-left: 9px;
+    background-color: #033075;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 120px;
+    height: 47px;
 }
 
 
