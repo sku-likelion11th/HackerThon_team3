@@ -80,39 +80,49 @@ a {
 /*header*/
 .main_category{
     display:flex;
-    justify-content: space-around;
-    padding-top:20px;
+    justify-content: space-between;
+    padding-top: 56px;
     background-color:#F5F7FA;
 }
-
+.category_header {
+    margin-left: 80px;
+}
 .main_category .category_main{
     margin-top:70px;
     font-size:50px;
     color:#4D4D4D;
 }
 .main_category .category_sub{
-    margin-top:-30px;
-    font-size:50px;
+    margin-top:-25px;
+    font-size:45px;
     color:#033075;
 }
 .main_category img{
-    margin-right:200px;
-    width:300px;
-    height:300px;
+    margin-right: 20px;
+    width:250px;
+    height:250px;
+    margin-bottom: 20px;
 }
 /*search form*/
 .search{
     text-align: center;
     margin-top:20px;
 }
+input::placeholder {
+    font-size: 14px;
+}
+input {
+    padding: 0 12px;
+}
 .search .search_text{
-    width:500px;
+    width:400px;
     height:50px;
     background-color: #F2F2F2;
     stroke: #9D9D9D;
+    border-radius: 5px;
 }
 .search .search_submit{
-    margin-left:10px;
+    border-radius: 5px;
     width:60px;
     height:50px;
     background-color: #033075;
@@ -123,26 +133,26 @@ a {
 /*category choice > radio*/
 .category_choice{
     margin-top:50px;
-    margin-left:500px;
+    margin-left:249px;
 }
 .category_choice .name{
-    font-size:40px;
+    font-size: 30px;
     font-weight: 900;
 }
 .category_choice .custom_radio{
-    margin:20px 0px 20px 40px;
+    margin: 25px 0px 20px 40px;
 }
 .category_choice .custom_radio .text_radio{
-    font-size:24px;
+    font-size: 18px;
 }
 
 
 /* category choice > checkbox*/
 .category_choice .custom_checkbox{
-    margin:20px 0px 20px 40px;
+    margin: 25px 0px 20px 40px;
 }
 .category_choice .custom_checkbox .text_checkbox{
-    font-size:24px;
+    font-size:18px;
 }
 
 
@@ -152,9 +162,9 @@ a {
     color:white;
     width:120px;
     height:40px;
-    margin-left:350px;
-    margin-top:20px;
+    margin: 20px 0 50px 350px;
     font-size:24px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 576px) {
