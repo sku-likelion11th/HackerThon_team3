@@ -101,7 +101,7 @@ input::placeholder {
     color: white;
 }
 .tool_name {
-    margin: 7px 0 0 30px;
+    margin: 20px 0 0 30px;
 }
 .tool_name input {
     background-color: transparent;
