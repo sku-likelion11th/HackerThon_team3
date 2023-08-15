@@ -94,7 +94,7 @@ a {
     width:500px;
     height:50px;
     background-color: #F2F2F2;
-    margin-left:900px;
+    margin-left:700px;
     border-radius: 5px;
 }
 .header .submit_education{
@@ -115,23 +115,36 @@ a {
     width:200px;
     height:250px;
     margin-top:-40px;
-    margin-left:400px;
+    margin-left:300px;
 }
 
 /*카테고리*/
 .category{
     display:flex;
 }
-
-.category ul li::marker{    /*마커 없애기 */
-    content:none;
+.category .optional #ed_target{
+    width:120px;
+    height:47px;
+    font-size:24px;
+    stroke:2px solid #033075;
+    color:#9D9D9D;
+    margin:23px 11px 0px 100px;
+    border-radius: 5px;
 }
-
+.category .optional #ed_field{
+    width:120px;
+    height:47px;
+    font-size:24px;
+    stroke:2px solid #033075;
+    color:#9D9D9D;
+    margin:23px 11px 0px 27px;
+    border-radius: 5px;
+}
 
 /*페이지네이션*/
 .page{
     margin-top:50px;
-    margin-left:200px;
+    margin-left:100px;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:40px 90px;
@@ -161,10 +174,7 @@ a {
     color:#000000;
 }
 .page .section p a i{
-    width:50px;
-    height:50px;
-    color:black;
-    display:inline-block;
+    margin-left:5px;
 }
 
 
@@ -209,7 +219,7 @@ a {
     .header .search_education{
         width:300px;
         height:30px;
-        margin-left:40px;
+        margin-left:20px;
     }
     .header .submit_education{
         width:40px;
@@ -217,7 +227,7 @@ a {
         font-size:16px;
     }
     .header .category_education{
-        width:60px;
+        width:70px;
         height:30px;
         font-size:16px;
     }
@@ -225,6 +235,19 @@ a {
         width:100px;
         height:150px;
         margin-left:15px;
+    }
+    /*카테고리*/
+    .category .optional #ed_target{
+        width:80px;
+        height:30px;
+        font-size:16px;
+        margin:10px 5px 0px 20px;
+    }
+    .category .optional #ed_field{
+        width:80px;
+        height:30px;
+        font-size:16px;
+        margin:10px 5px 0px 20px;
     }
 
     /*페이지네이션 */
