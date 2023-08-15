@@ -7,26 +7,25 @@
 .gangwon-font {
     font-family: 'GangwonState', sans-serif;
 }
-body{
+.display-container{
     margin: 0;
+    max-width: 1200px;   
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
 }
-a{
+a {
     text-decoration: none;
-    color: #f0f4f5;
 }
+/* navbar section */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #033075;
     padding: 8px 12px;
 }
-.navbar_logo {
-    font-size: 20px;
-    color: #f0f4f5;
-}
-.navbar_logo i{
-    color: #d49466;/* 색상 설정하기 */
+.navbar_logo img {
+    width: 130px;
+    height: 25px;
+    margin-left: 20px;
 }
 .navbar_menu {
     display: flex;
@@ -37,9 +36,14 @@ a{
 .navbar_menu li {
     padding: 8px 12px;
 }
+.navbar a {
+    color: white;
+}
 .navbar_menu li:hover {
     background-color: #f0f4f5;
     border-radius: 4px;
+}
+.navbar_menu li:hover > a {
     color: #033075;
 }
 .navbar_login {
@@ -48,13 +52,16 @@ a{
     display: flex;
     padding-left: 0;
     margin-bottom: 0;
+    margin-right: 20px;
     font-size: 12px;
 }
-.navbar_login:hover {
+.navbar_login li:hover {
     background-color: #f0f4f5;
     border-radius: 4px;
-    color: #033075;
     padding: 8px 4px;
+}
+.navbar_login li:hover > a {
+    color: #033075;
 }
 .navbar_login i{
     padding-left: 5px;
