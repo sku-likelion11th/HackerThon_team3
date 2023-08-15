@@ -23,12 +23,9 @@ a {
     background-color: #033075;
     padding: 8px 12px;
 }
-.navbar_logo {
-    font-size: 20px;
-    color: #f0f4f5;
-}
-.navbar_logo i{
-    color: #d49466;/* 색상 설정하기 */
+.navbar_logo img {
+    width: 130px;
+    height: 25px;
 }
 .navbar_menu {
     display: flex;
@@ -75,6 +72,7 @@ a {
 /* main */
 .main{
     white-space: nowrap; /*가로 폭이 줄어들었을 때 자동 줄바꿈이 일어나지 않도록함*/
+    margin-top: 65px; 
 }
 .main p{
     color:#4D4D4D;
