@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'GangwonState';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.gangwon-font {
+    font-family: 'GangwonState', sans-serif;
+}
+.display-container{
+    margin: 0;
+    max-width: 1200px;   
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+/* navbar section */
+.navbar {
+    background-color: #033075;
+    padding: 8px 12px;
+}
+.navbar_logo img {
+    width: 130px;
+    height: 25px;
+    margin-left: 20px;
+}
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+.navbar_menu li {
+    padding: 8px 12px;
+}
+.navbar a {
+    color: white;
+}
+.navbar_menu li:hover {
+    background-color: #f0f4f5;
+    border-radius: 4px;
+}
+.navbar_menu li:hover > a {
+    color: #033075;
+}
+.navbar_login {
+    list-style: none;
+    color: #f0f4f5;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-size: 12px;
+}
+.navbar_login li:hover {
+    background-color: #f0f4f5;
+    border-radius: 4px;
+    padding: 8px 4px;
+}
+.navbar_login li:hover > a {
+    color: #033075;
+}
+.navbar_login i{
+    padding-left: 5px;
+}
+.navbar_toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 20px;
+    color: #d49466  ;
+}
+.navbar_toggleBtn:hover i:hover {
+    color: #f0f4f5;
+}
+
+/* header seciton */
+.header_section {
+    background-color: #f5f7fa;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.header .topheader {
+    font-size: 60px;
+    padding: 120px 0 0 100px;
+}
+.header .subheader {
+    font-size: 40px;
+    color: #033075;
+    padding: 0 0 0 100px;
+    margin-top: -45px;
+    margin-bottom: 70px;
+}
+.MP_img {
+    margin: 80px 100px 0 0;
+}
+.MP_img img {
+    width: 200px;
+    height: 200px;
+}
+.inform p {
+    font-size: 28px;
+    margin-right: 600px;
+    margin-top: 15px;
+}
+.newinform p {
+    font-size: 28px;
+    margin-right: 555px;
+    margin-top: 15px;
+}
+.content_section p {
+    margin-top: 6px;
+}
+.content_section .line {
+    border: 1px solid #033075;
+    width: 720px;
+    margin-left: 240px;
+    margin-top: -10px;
+}
+.content_section input {
+    width:250px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #f5f7fa;
+    border: 2px solid #9d9d9d;
+    font-size: 13px;
+}
+.correct {
+    margin-top: 10px;
+}
+.correct_email p {
+    margin-right: 124px;
+}
+.correct_name p {
+    margin-right: 137px;
+}
+.correct_newpw p {
+    margin-right: 64px;
+}
+.correct_newpwcheck p {
+    margin-right: 50px;
+}
+.changeBtn button {
+    color: white;
+    padding-left: 5px;
+    background-color: #033075;
+    font-size: 13px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+}
