@@ -16,6 +16,7 @@
 }
 a {
     text-decoration: none;
+    color: white;
 }
 /* navbar section */
 .navbar {
@@ -89,15 +90,14 @@ a {
     display:flex;
     justify-content: space-around;
     margin-top:20px;
-    text-align: center;
+    align-items: center;
 }
 .first p{
     margin-top:20px;
-    font-size:25.06px;
+    font-size:25px;
 }
 .first img{
-    margin-top:44px;
-    width:100px;
+    width:80px;
     height:25px;
 }
 /* main > second */
@@ -108,7 +108,7 @@ a {
 .second .second_text{
     margin-top:40px;
     margin-bottom:20px;
-    margin-left:200px;
+    margin-left:60px;
 }
 .second .second_main1{
     font-size:50px;
@@ -137,7 +137,7 @@ a {
     font-size:20px;
 }
 .second img{
-    width:600px;
+    width:500px;
     margin:-60px;
     margin-left:150px;
 }
@@ -149,10 +149,10 @@ a {
     margin-bottom:10px;
 }
 .third img{
-    margin-left:200px;
+    margin-left:60px;
 }
 .third .third_text{
-    margin-left:200px;
+    margin-left:145px;
     margin-bottom:10px;
     padding-top:30px;
 }
@@ -162,6 +162,7 @@ a {
 .third .third_text .third_sub{
     font-size:18px;
     color:#717171;
+    margin-left: 8px;
 }
 .third .third_text .benefit{
     background-color:#033075;
@@ -172,7 +173,7 @@ a {
 }
 .third .third_text .benefit .benefit_button{
     position:absolute;
-    margin-left:20px;
+    margin-left: 20px;
     margin-top:10px;
     font-size:20px;
 }
@@ -185,17 +186,18 @@ a {
     padding-bottom:20px;
 }
 .fourth img{
-    margin-left:200px;
+    margin-left: 60px;
 }
 .fourth .fourth_text{
-    padding-top:30px;
-    margin-left:155px;
+    padding-top: 30px;
+    margin-left: 100px;
 }
 .fourth .fourth_text .fourth_main{
     font-size:50px;
 }
 .fourth .fourth_text .fourth_sub{
     font-size:18px;
+    margin-left: 5px;
     color:#717171;
 }
 .fourth .education{
@@ -216,10 +218,10 @@ a {
     display:flex;
 }
 .fifth img{
-    margin-left:200px;
+    margin-left: 35px;
 }
 .fifth .fifth_text{
-    margin-left:155px;
+    margin-left: 120px;
     margin-top:20px;
 }
 .fifth .fifth_main{
@@ -227,6 +229,7 @@ a {
 }
 .fifth .fifth_sub{
     font-size:18px;
+    margin-left: 8px;
     color:#717171;
 }
 .fifth .fifth_text .professor{
