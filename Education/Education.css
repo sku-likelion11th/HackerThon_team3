@@ -203,7 +203,7 @@ input::placeholder {
     border:2px solid #033075;
     border-radius: 10px;
     width: 350px;
-    height: 275px;
+    height: 260px;
     margin: 10px 10px;
 }
 .box_video{
@@ -213,7 +213,7 @@ input::placeholder {
     margin-top: 20px;
 }
 .box_content {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 .page_box p{
     margin-left:20px;
@@ -231,16 +231,23 @@ input::placeholder {
     margin-left: 5px;
 }
 .pagination a {
+    margin-top: 50px;
     color: black;
-    float: left;
-    padding: 8px 16px;
+    padding: 8px 8px;
     text-decoration: none;
     transition: background-color .3s;
   }
-  
+  .pagination a:hover {
+    background-color: dodgerblue ;
+    color: white;
+    border-radius: 50px;
+    height: 25px;
+  }
   .pagination a.active {
     background-color: dodgerblue;
     color: white;
+    border-radius: 50px;
+    height: 25px;
   }
 
 
