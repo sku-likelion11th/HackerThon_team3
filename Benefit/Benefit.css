@@ -163,6 +163,7 @@ a {
     color:#9D9D9D;
 }
 .page .section .ed_name{
+    font-size:40px;
     color:#000000;
 }
 .page .section p a{
@@ -254,6 +255,9 @@ a {
     .page .section{
         width:250px;
         height:300px;
+    }
+    .page .section .ed_name{
+        font-size:24px;
     }
     .page .section p{
         margin-left:10px;

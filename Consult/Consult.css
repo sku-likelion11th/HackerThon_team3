@@ -23,12 +23,9 @@ a {
     background-color: #033075;
     padding: 8px 12px;
 }
-.navbar_logo {
-    font-size: 20px;
-    color: #f0f4f5;
-}
-.navbar_logo i{
-    color: #d49466;/* 색상 설정하기 */
+.navbar_logo img {
+    width: 120px;
+    height: 25px;
 }
 .navbar_menu {
     display: flex;
@@ -75,10 +72,12 @@ a {
 /* Header section */
 .header_section {
     background-color: #f5f7fa;
+    margin-top: 65px;
 }
 .header p {
-    font-size: 24px;
+    font-size: 32px;
     margin: 8px;
+    padding: 0 16px;
 }
 .header_line {
     border-top: 1px black solid;
@@ -146,6 +145,29 @@ input::placeholder {
     width: 250px;
     height: 250px;
     margin-top: -30px;
+}
+.category{
+    display:flex;
+}
+.category .optional #ed_target{
+    width:120px;
+    height:47px;
+    font-size:16px;
+    stroke:2px solid #033075;
+    color:#9D9D9D;
+    margin:23px 11px 0px 100px;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+.category .optional #ed_field{
+    width:120px;
+    height:47px;
+    font-size:16px;
+    stroke:2px solid #033075;
+    color:#9D9D9D;
+    margin:23px 11px 0 0;
+    padding: 0 8px;
+    border-radius: 5px;
 }
 
 
