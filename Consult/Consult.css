@@ -205,9 +205,16 @@ input::placeholder {
     border: 1px solid #033075;
     border-radius: 15px;
     width: 1000px;
-    height: 250px;
+    height: 270px;
     margin: 50px 100px 50px 0;
     margin-left: 100px;
+}
+.question_box .line {
+    border: 1px solid #9d9d9d;
+    margin: 0 30px;
+}
+.question_box .answer {
+    margin-top: 25px;
 }
 
 @media screen and (max-width: 576px) {
