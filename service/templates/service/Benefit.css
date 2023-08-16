@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'GangwonState';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
@@ -78,9 +79,10 @@ a {
     color: #f0f4f5;
 }
 
-/* Header section */
+/*header*/
 .header_section {
     background-color: #e2edff   ;
+
     margin-top: 56px;
 }
 .header p {
@@ -126,6 +128,7 @@ input::placeholder {
     position: absolute;
     margin-right: 75px;
 }
+
 .search_bar input {
     width:250px;
     height: 45px;
@@ -145,6 +148,8 @@ input::placeholder {
 }
 .searchBtn button {
     background-color: #fcfcfc;
+}
+.searchBtn button {
     border: 2px solid #9d9d9d;
     width: 45px;
     height: 45px;
@@ -153,18 +158,17 @@ input::placeholder {
 }
 .searchBtn i {
     color: #9d9d9d;
+    padding: px;
 }
 .header_img {
-    height: 250px;
-    margin-top: -40px;
     margin-left: 980px;
-}
-.header_img img {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
+    margin-top: -50px;
+
 }
 
-/* category section */
+/*카테고리*/
 .category{
     display:flex;
 }
@@ -194,62 +198,59 @@ input::placeholder {
 #ed_field:hover {
     border: 2px solid black;
 }
-.writeBtn {
+
+
+/*페이지네이션*/
+.page_section{
+    margin: 50px 25px 50px 25px;
+}
+.page_line1 {
     display: flex;
-    position: absolute;
-    margin: 23px 11px 0 1070px;
+    justify-content: center;
 }
-.writeBtn button {
-    color: white;
-    padding-left: 5px;
-    background-color: #033075;
-    font-size: 16px;
-    border: 1px solid white;
+.page_line2 {
+    display: flex;
+    justify-content: center;
+}
+.page_section .page_box{
+    border:2px solid #033075;
+    border-radius: 10px;
+    width: 350px;
+    height: 260px;
+    margin: 10px 10px;
+}
+.box_content {
+    margin-top: 15px;
+}
+.smallbox {
+    border: 2px solid #006ae2;
     border-radius: 5px;
-    width: 120px;
-    height: 47px;
+    width: 100px;
+    height: 35px;
+    margin: 8px 20px;
+    text-align: center;
+    padding-top: 4px;
 }
-.writeBtn button:hover {
-    color: #033075;
-    background-color: white;
-    border: 3px solid #033075;
+.page_box p{
+    margin: 0 20px;
+    margin-bottom: 0;
+    font-size:16px;
+    color:#9D9D9D;
 }
-/* consult list */
-.consult_list a .header {
-    color: black;
+.page_box .ed_name{
+    color:#000000;
     font-size: 30px;
-    padding: 20px;
 }
-.consult_list a .content, .answer {
-    color: #9d9d9d;
-    font-size: 20px;
-    padding: 10px 30px;
-}
-.question_box:hover {
+.page_box:hover{
     background: #f6fbfe;
     border: 2px solid dodgerblue;
 }
-.question_box {
-    border: 1px solid #033075;
-    border-radius: 15px;
-    width: 1000px;
-    height: 270px;
-    margin: 50px 100px 50px 0;
-    margin-left: 100px;
-}
-.question_box:hover {
-    background-color: #f6fbfe;
-    border: 2px solid #006ae2;
-}
-.question_box .line {
-    border: 1px solid #9d9d9d;
-    margin: 0 30px;
-}
-.question_box .answer {
-    margin-top: 25px;
+.page_box ul {
+    color: #9d9d9d;
+    margin-left: 10px;
 }
 .pagination a {
-    margin: 30px 0;
+    margin-top: 50px;
     color: black;
     padding: 8px 8px;
     text-decoration: none;
@@ -293,5 +294,68 @@ input::placeholder {
     }
     .navbar_menu.active, .navbar_login.active {
         display: flex;
+    }
+    
+    /*header */
+    .header .title{
+        margin-left:10px;
+        padding-top:10px;
+        font-size:30px;
+    }
+    .header .search_form{
+        padding-top:25px;
+    }
+    .header .search_education{
+        width:300px;
+        height:30px;
+        margin-left:20px;
+    }
+    .header .submit_education{
+        width:40px;
+        height:30px;
+        font-size:16px;
+    }
+    .header .category_education{
+        width:70px;
+        height:30px;
+        font-size:16px;
+    }
+    .header img{
+        width:100px;
+        height:150px;
+        margin-left:15px;
+    }
+    /*카테고리*/
+    .category .optional #ed_target{
+        width:80px;
+        height:30px;
+        font-size:16px;
+        margin:10px 5px 0px 20px;
+    }
+    .category .optional #ed_field{
+        width:80px;
+        height:30px;
+        font-size:16px;
+        margin:10px 5px 0px 20px;
+    }
+
+    /*페이지네이션 */
+    .page{
+        margin-top:25px;
+        margin-left:20px;
+        grid-template-columns: 1fr 1fr;
+        gap:10px 15px;
+    }
+    .page .section{
+        width:250px;
+        height:300px;
+    }
+    .page .section .ed_name{
+        font-size:24px;
+    }
+    .page .section p{
+        margin-left:10px;
+        margin-top:10px;
+        font-size:14px;
     }
 }

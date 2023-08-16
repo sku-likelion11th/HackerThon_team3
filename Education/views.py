@@ -41,9 +41,9 @@ def api_education_search(request):
             if rightIndex>paginator.num_pages:
                 rightIndex=paginator.num_pages
             custom_range=range(leftIndex, rightIndex+1)
-        return render(request, 'education/education.html', {'datas' : datas, 'paginator': paginator, 'curPage': curPage, 'range': custom_range})
+        return render(request, 'Education.html', {'datas' : datas, 'paginator': paginator, 'curPage': curPage, 'range': custom_range})
     else:
-        return render(request, 'education/education.html')
+        return render(request, 'Education.html')
 
 def search(request):
     if request.method == "GET":
@@ -82,6 +82,6 @@ def search(request):
             if rightIndex>paginator.num_pages:
                 rightIndex=paginator.num_pages
             custom_range=range(leftIndex, rightIndex+1)
-        return render(request, 'education/education.html', {'datas' : datas, 'paginator': paginator, 'curPage': curPage, 'range': custom_range})
+        return render(request, 'Education.html', {'datas' : datas, 'paginator': paginator, 'curPage': curPage, 'range': custom_range})
     else:
-        return render(request, 'education/education.html')
+        return render(request, 'Education.html')
