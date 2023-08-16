@@ -3,30 +3,22 @@ body {
     background-color: #033075;
 }
 .display-container{
-    margin: auto;
     max-width: 1200px;   
     margin-left: auto;
     margin-right: auto;
-    min-height: 100vh;
 }
 
 /* header section */
-.headerpart {
-    position: relative;
-}
 .login_header {
     display: flex;
-    position: absolute;
     color: white;
     font-size: 100px;
     font-weight: 550;
     margin-top: 180px;
 }
 .login_subheader {
-    position: absolute;
     color: white;
     font-size: 15px;
-    margin-top: 330px;
     margin-left: 20px;
 }
 .SignUpBtn {
@@ -38,8 +30,6 @@ body {
     padding: 10px 88px 10px 15px;
     background-color: #033075;
     border: white solid 2px;
-    
-    margin-top: 400px;
     width:260px;
 }
 .SignUpBtn button a{
@@ -251,7 +241,7 @@ input::placeholder {
     }
     /* tool-part */
     .login_border{
-        left:115px;
+        
         top:105px;
     }
     .tool_header p{
