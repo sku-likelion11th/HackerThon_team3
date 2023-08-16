@@ -25,13 +25,14 @@ a {
 .navbar_logo img {
     width: 130px;
     height: 25px;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 .navbar_menu {
     display: flex;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
+    margin-right: 90px;
 }
 .navbar_menu li {
     padding: 8px 12px;
@@ -82,7 +83,7 @@ a {
     display:flex;
     justify-content: space-between;
     padding-top: 56px;
-    background-color:#F5F7FA;
+    background-color:#e2edff;
 }
 .category_header {
     margin-left: 80px;
