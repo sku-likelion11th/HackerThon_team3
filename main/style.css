@@ -33,6 +33,7 @@ a {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
+    margin-right: 90px;
 }
 .navbar_menu li {
     padding: 8px 12px;
@@ -80,7 +81,7 @@ a {
 /* main */
 .main{
     white-space: nowrap; /*가로 폭이 줄어들었을 때 자동 줄바꿈이 일어나지 않도록함*/
-    margin-top: 65px; 
+    margin-top: 56px; 
 }
 .main p{
     color:#4D4D4D;
@@ -104,6 +105,7 @@ a {
 .second{
     background-color: #F5F7FA;
     display:flex;
+    justify-content: space-between;
 }
 .second .second_text{
     margin-top:40px;
@@ -137,9 +139,8 @@ a {
     font-size:20px;
 }
 .second img{
-    width:500px;
-    margin:-60px;
-    margin-left:150px;
+    width:400px;
+    margin:0 80px 0 0;
 }
 
 /* main > third */
@@ -183,21 +184,22 @@ a {
     background-color:#F5F7FA;
     display:flex;
     padding-top:10px;
-    padding-bottom:20px;
+    margin-bottom:10px;
 }
 .fourth img{
     margin-left: 60px;
 }
 .fourth .fourth_text{
-    padding-top: 30px;
-    margin-left: 100px;
+    margin-left:100px;
+    margin-bottom:10px;
+    padding-top:30px;
 }
 .fourth .fourth_text .fourth_main{
     font-size:50px;
 }
 .fourth .fourth_text .fourth_sub{
     font-size:18px;
-    margin-left: 5px;
+    margin-left: 8px;
     color:#717171;
 }
 .fourth .education{
@@ -216,13 +218,16 @@ a {
 /* main > fifth */
 .fifth{
     display:flex;
+    padding-top:10px;
+    margin-bottom:10px;
 }
 .fifth img{
-    margin-left: 35px;
+    margin-left: 90px;
 }
 .fifth .fifth_text{
-    margin-left: 120px;
-    margin-top:20px;
+    margin-left:140px;
+    margin-bottom:10px;
+    padding-top:30px;
 }
 .fifth .fifth_main{
     font-size:50px;
@@ -252,6 +257,9 @@ a {
         align-items: flex-start;
         padding: 8px 24px;
     }
+    .navbar_logo img{
+        margin-left:0px;
+    }
     .navbar_menu{
         display: none;
         flex-direction: column;
@@ -277,6 +285,7 @@ a {
     /* main */
     .main{
         white-space: initial;
+        margin-top:0px;
     }
 
     /*main > first */
@@ -285,20 +294,16 @@ a {
     }
     .first img{
         width:50px;
-        margin-top:32px;
+        margin-top:2px;
     }
 
     /* main > second */
-    .second{
-        position:relative;
-        flex-direction: column;
-    }
     .second .second_text{
         margin-left:20px;
     }
     .second .second_text .second_main1{
         font-size:20px;
-        width:400px
+        width:400px;
     }
     .second .second_text .second_main2{
         font-size:20px;
@@ -316,11 +321,9 @@ a {
         margin-left:13px;
         margin-top:5px;
     }
+
     .second img{
-        width:220px;
-        margin-top:0px;
-        margin-left: 338px;
-        position:absolute;
+        width:200px;
     }
 
     /* main > third */
@@ -336,7 +339,7 @@ a {
         font-size:20px;
     }
     .third .third_text .third_sub{
-        font-size:14px;
+        font-size:12px;
     }
     .third .third_text .benefit{
         width:100px;
@@ -361,7 +364,7 @@ a {
         font-size:20px;
     }
     .fourth .fourth_text .fourth_sub{
-        font-size:14px;
+        font-size:12px;
     }
     .fourth .education{
         width:100px;
@@ -374,10 +377,9 @@ a {
     }
     /* main > fifth*/
     .fifth img{
-        margin-left:0px;
+        margin-left:20px;
         width:180px;
         height:180px;
-        margin-right: 20px;
     }
     .fifth .fifth_text{
         margin-left:20px;
@@ -386,7 +388,7 @@ a {
         font-size:20px;
     }
     .fifth .fifth_sub{
-        font-size:14px;
+        font-size:12px;
     }
     .fifth .fifth_text .professor{
         width:100px;
