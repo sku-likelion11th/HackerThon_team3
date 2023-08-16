@@ -82,6 +82,7 @@ a {
 /*header*/
 .header_section {
     background-color: #e2edff   ;
+
     margin-top: 56px;
 }
 .header p {
@@ -127,6 +128,7 @@ input::placeholder {
     position: absolute;
     margin-right: 75px;
 }
+
 .search_bar input {
     width:250px;
     height: 45px;
@@ -146,6 +148,8 @@ input::placeholder {
 }
 .searchBtn button {
     background-color: #fcfcfc;
+}
+.searchBtn button {
     border: 2px solid #9d9d9d;
     width: 45px;
     height: 45px;
@@ -161,6 +165,7 @@ input::placeholder {
     width: 220px;
     height: 220px;
     margin-top: -50px;
+
 }
 
 /*카테고리*/
