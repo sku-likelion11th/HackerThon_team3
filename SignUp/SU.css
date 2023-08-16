@@ -3,99 +3,68 @@ body {
     background-color: #033075;
 }
 .display-container{
-    margin: auto;
     max-width: 1200px;   
     margin-left: auto;
     margin-right: auto;
-    min-height: 100vh;
 }
 
 /* header section */
 .headerpart {
-    position: relative;
+    display: flex;
 }
 .login_header {
-    display: flex;
-    position: absolute;
     color: white;
     font-size: 100px;
     font-weight: 550;
     margin-top: 180px;
 }
 .login_subheader {
-    position: absolute;
     color: white;
     font-size: 15px;
-    margin-top: 330px;
     margin-left: 20px;
 }
-
-.SignUpBtn {
-    display: flex;
-    flex-direction: column;
+/* Btn section */
+.Btn_section {
     margin-left: 20px;
 }
-.SignUpBtn button {
-    padding: 10px 80px 10px 15px;
-    background-color: #033075;
-    border: white solid 2px;
-
-    margin-top: 400px;
-    width:260px;
+.Btn_section button {
+    width: 260px;
+    height: 50px;
+    background-color: inherit;
+    border: 2px solid white;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: start;
+    padding: 0 20px;
 }
-.SignUpBtn button a{
-    text-decoration: none;
-    color:white;
-    font-size:18px;
+.SUBtn:hover {
+    background-color: white;
+    color: #033075;
     font-weight: 600;
 }
-.notmemberBtn {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-.notmemberBtn button {
-    padding: 10px 70px 10px 15px;
-    background-color: #033075;
-    border: white solid 2px;
-    
-    margin-top: 15px;
-    width: 260px;
-}
-.notmemberBtn button a{
-    text-decoration: none;
-    font-size:18px;
-    color:white;
-    font-weight:600;
-}
-button:hover {
-    cursor: default;
-}
-button a:hover{
-    color:#033075;
+.NMBtn:hover {
     background-color: white;
+    color: #033075;
+    font-weight: 600;
 }
+
 /* tool-part */
+.login_tool {
+    width: 350px;
+    margin-left: 350px;
+    margin-top: 100px;
+}
 .login_border {
     border: 5px solid transparent;
     background-image: linear-gradient(#032964, #032964), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    width: 350px !important;
+    width: 350px;
     height: 550px;
     border-radius: 15px;
-    box-shadow: -5px 5px 7px;
-    margin-top: -50px;
-}
-.login_tool {
-    display: flex;
-    justify-content: center;
-    margin-left: 850px;
-}
-.login_border {
-    position: absolute;
-    width: 800px;
-    top: 150px;
+    box-shadow: -5px 5px 7px 
 }
 .tool_header p {
     font-size: 30px;
@@ -220,24 +189,30 @@ input::placeholder {
 .signBtn{
     display:none;
 }
+.tool_logo {
+    display: none;
+}
 
 @media screen and (max-width: 576px) {
-    .login_header{
-        margin-top:5px;
-        margin-left:140px;
-        z-index: 1;
-    }
-    .login_header .logo{
-        width:230px;
-        content: url('../img/tool_logo.png');
+    .header_section{
+        display: none;
     }
     /* tool-part */
-    .login_border{
-        left:115px;
+    .login_tool{
+        display: grid;
         top:105px;
+        margin-left: 0;
+    }
+    /* tool-part */
+    .tool_logo {
+        display: block;
+    }
+    .tool_logo img {
+        width: 250px;
+        margin: 20px 0 0 20px;
     }
     .tool_header p{
-        margin-top:60px;
+        margin-top: 15px;
     }
     .tool_checkbox span{
         font-size:12px;
@@ -263,9 +238,8 @@ input::placeholder {
     /*new sign*/
     .signBtn{
         display:flex;
-        flex-direction: column;    
-        text-align: center;  
-        margin-top:10px;
+        justify-content: space-around;
+        margin-top: 15px;
     }
     .signBtn p a{
         text-decoration: none;
