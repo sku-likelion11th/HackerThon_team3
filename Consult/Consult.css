@@ -225,6 +225,10 @@ input::placeholder {
     font-size: 20px;
     padding: 10px 30px;
 }
+.question_box:hover {
+    background: #f6fbfe;
+    border: 2px solid dodgerblue;
+}
 .question_box {
     border: 1px solid #033075;
     border-radius: 15px;
