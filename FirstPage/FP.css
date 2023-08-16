@@ -215,10 +215,9 @@ input::placeholder {
     }
     /* tool-part */
     .login_tool{
-        display: block;
+        display: grid;
         top:105px;
         margin-left: 0;
-        justify-content: center;
     }
     .tool_logo {
         display: block;
@@ -227,7 +226,6 @@ input::placeholder {
         width: 250px;
         margin: 20px 0 0 20px;
     }
-    
     .tool_header p{
         margin-top: 15px;
     }
