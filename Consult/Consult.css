@@ -233,6 +233,10 @@ input::placeholder {
     margin: 50px 100px 50px 0;
     margin-left: 100px;
 }
+.question_box:hover {
+    background-color: #f6fbfe;
+    border: 2px solid #006ae2;
+}
 .question_box .line {
     border: 1px solid #9d9d9d;
     margin: 0 30px;
@@ -240,6 +244,23 @@ input::placeholder {
 .question_box .answer {
     margin-top: 25px;
 }
+.pagination a {
+    margin: 30px 0;
+    color: black;
+    padding: 8px 8px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  .pagination a:hover {
+    background-color: dodgerblue ;
+    color: white;
+    border-radius: 50px;
+  }
+  .pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 50px;
+  }
 
 @media screen and (max-width: 576px) {
     .navbar {

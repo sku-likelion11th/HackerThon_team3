@@ -79,7 +79,7 @@ a {
 
 /* header seciton */
 .header_section {
-    background-color: #f5f7fa;
+    background-color: #e2edff;
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
@@ -101,6 +101,11 @@ a {
 .MP_img img {
     width: 200px;
     height: 200px;
+}
+
+/* content section */
+.content_section {
+    margin-top: 20px;
 }
 .inform p {
     font-size: 28px;
@@ -208,10 +213,15 @@ a {
   }
   .tablist {
     border: 1px solid #9d9d9d;
-    background-color: #F2F2F2;
+    background-color: white;
     border-radius: 5px;
     width: 1000px;
     margin-left: 100px;
+    margin-top: 10px;
+}
+.tablist:hover {
+    background-color: #f6fbfe;
+    border: 2px solid #006ae2;
 }
   .tabcontent p {
     margin-top: 10px;
