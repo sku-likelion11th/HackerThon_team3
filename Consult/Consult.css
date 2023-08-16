@@ -209,6 +209,11 @@ input::placeholder {
     width: 120px;
     height: 47px;
 }
+.writeBtn button:hover {
+    color: #033075;
+    background-color: white;
+    border: 3px solid #033075;
+}
 /* consult list */
 .consult_list a .header {
     color: black;
