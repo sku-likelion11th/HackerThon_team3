@@ -79,7 +79,7 @@ a {
 
 /*header*/
 .header_section {
-    background-color: #f5f7fa;
+    background-color: #e2edff   ;
     margin-top: 56px;
 }
 .header p {
@@ -91,8 +91,6 @@ a {
     border-top: 1px black solid;
 }
 input::placeholder {
-    font-size: 12px;
-    padding-left: 10px;
     color: #9d9d9d;
 }
 .search_section {
@@ -110,16 +108,21 @@ input::placeholder {
     width:250px;
     height: 45px;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #fcfcfc;
     border: 2px solid #9d9d9d;
+    padding-left: 10px;
+    font-size: 12px;
 }
 .searchBtn {
     display: flex;
     position: absolute;
     margin-left: 140px;
 }
+.searchBtn button:hover {
+    border: 2px solid black;
+}
 .searchBtn button {
-    background-color: #f2f2f2;
+    background-color: #fcfcfc;
     border: 2px solid #9d9d9d;
     width: 45px;
     height: 45px;
@@ -175,6 +178,9 @@ input::placeholder {
     padding: 0 8px;
     border-radius: 5px;
 }
+#ed_target:hover {
+    border: 2px solid black;
+}
 .category .optional #ed_field{
     width:120px;
     height:47px;
@@ -184,6 +190,9 @@ input::placeholder {
     margin:23px 11px 0 0;
     padding: 0 8px;
     border-radius: 5px;
+}
+#ed_field:hover {
+    border: 2px solid black;
 }
 
 /*페이지네이션*/
@@ -224,8 +233,9 @@ input::placeholder {
 .page_box .ed_name{
     color:#000000;
 }
-.page_box a{
-    color:#000000;
+.page_box:hover{
+    background: #f6fbfe;
+    border: 2px solid dodgerblue;
 }
 .page_box i{
     margin-left: 5px;
@@ -241,13 +251,11 @@ input::placeholder {
     background-color: dodgerblue ;
     color: white;
     border-radius: 50px;
-    height: 25px;
   }
   .pagination a.active {
     background-color: dodgerblue;
     color: white;
     border-radius: 50px;
-    height: 25px;
   }
 
 
