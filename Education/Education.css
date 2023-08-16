@@ -25,13 +25,14 @@ a {
 .navbar_logo img {
     width: 130px;
     height: 25px;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 .navbar_menu {
     display: flex;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
+    margin-right: 90px;
 }
 .navbar_menu li {
     padding: 8px 12px;
@@ -79,7 +80,7 @@ a {
 
 /*header*/
 .header_section {
-    background-color: #f5f7fa;
+    background-color: #e2edff   ;
     margin-top: 56px;
 }
 .header p {
@@ -90,9 +91,21 @@ a {
 .header_line {
     border-top: 1px black solid;
 }
+.subheader {
+    font-size: 28px;
+    margin-top: 50px;
+}
+.subheader .blue {
+    color: #006ae2;
+}
+.header_section .line {
+    width: 210px;
+    border: 5px solid #f1e6a7;
+    z-index: -1;
+    margin-top: -30px;
+    margin-left: 412px;
+}
 input::placeholder {
-    font-size: 12px;
-    padding-left: 10px;
     color: #9d9d9d;
 }
 .search_section {
@@ -110,16 +123,21 @@ input::placeholder {
     width:250px;
     height: 45px;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #fcfcfc;
     border: 2px solid #9d9d9d;
+    padding-left: 10px;
+    font-size: 12px;
 }
 .searchBtn {
     display: flex;
     position: absolute;
     margin-left: 140px;
 }
+.searchBtn button:hover {
+    border: 2px solid black;
+}
 .searchBtn button {
-    background-color: #f2f2f2;
+    background-color: #fcfcfc;
     border: 2px solid #9d9d9d;
     width: 45px;
     height: 45px;
@@ -175,6 +193,9 @@ input::placeholder {
     padding: 0 8px;
     border-radius: 5px;
 }
+#ed_target:hover {
+    border: 2px solid black;
+}
 .category .optional #ed_field{
     width:120px;
     height:47px;
@@ -184,6 +205,9 @@ input::placeholder {
     margin:23px 11px 0 0;
     padding: 0 8px;
     border-radius: 5px;
+}
+#ed_field:hover {
+    border: 2px solid black;
 }
 
 /*페이지네이션*/
@@ -224,8 +248,9 @@ input::placeholder {
 .page_box .ed_name{
     color:#000000;
 }
-.page_box a{
-    color:#000000;
+.page_box:hover{
+    background: #f6fbfe;
+    border: 2px solid dodgerblue;
 }
 .page_box i{
     margin-left: 5px;
@@ -241,13 +266,11 @@ input::placeholder {
     background-color: dodgerblue ;
     color: white;
     border-radius: 50px;
-    height: 25px;
   }
   .pagination a.active {
     background-color: dodgerblue;
     color: white;
     border-radius: 50px;
-    height: 25px;
   }
 
 
@@ -257,12 +280,18 @@ input::placeholder {
         align-items: flex-start;
         padding: 8px 24px;
     }
+    .navbar_logo{
+
+        margin-right: 115px;
+        align-items: start;
+    }
     .navbar_menu{
         display: none;
         flex-direction: column;
         align-items: center;
         width: 100%;
         margin-bottom: 20px;
+        margin-top: 10px;
     }
     .navbar_menu li{
         width: 100%;
@@ -271,6 +300,7 @@ input::placeholder {
     .navbar_login {
         display: none;
         justify-content: center;
+        margin-right: 90px;
         width: 100%;
     }
     .navbar_toggleBtn{
