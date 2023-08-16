@@ -20,6 +20,7 @@
 a {
     text-decoration: none;
 }
+
 /* navbar section */
 .navbar {
     background-color: #033075;
@@ -80,6 +81,8 @@ a {
 .navbar_toggleBtn:hover i:hover {
     color: #f0f4f5;
 }
+
+/* content section */
 .content_section {
     margin-top: 56px;
     margin-left: 40px;
@@ -109,21 +112,33 @@ a {
     border: 1px solid #9d9d9d;
     margin-right: 40px;
 }
-.moveQuestion {
-    margin-top: 5px;
-    margin-right: 40px;
+
+/* answer write section */
+.writeBtn {
+    display: flex;
+    margin: 10px 50px 10px 0;
+    justify-content: end;
 }
-.moveQuestion p {
-    color: #9d9d9d;
+.writeBtn button {
+    color: white;
+    background-color: #033075;
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
 }
-.moveQuestion button {
-    width: 100px;
-    background-color: white;
-    border: none;
+textarea {
+    resize: none;
+    padding: 8px 16px;
+    margin-left: 25px;
+    border-radius: 5px;
 }
-.moveQuestion i {
-    margin: 4px;
+.answer_write_tool {
+    margin-bottom: 10px;
 }
+
+/* answer section */
 .answer_section {
     background-color: #e2edff;
     border-radius: 3px;
