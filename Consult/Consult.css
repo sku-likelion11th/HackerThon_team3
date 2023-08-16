@@ -25,13 +25,14 @@ a {
 .navbar_logo img {
     width: 130px;
     height: 25px;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 .navbar_menu {
     display: flex;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
+    margin-right: 90px;
 }
 .navbar_menu li {
     padding: 8px 12px;
@@ -79,7 +80,7 @@ a {
 
 /* Header section */
 .header_section {
-    background-color: #f5f7fa;
+    background-color: #e2edff   ;
     margin-top: 56px;
 }
 .header p {
@@ -90,9 +91,27 @@ a {
 .header_line {
     border-top: 1px black solid;
 }
+.subheader {
+    font-size: 28px;
+    margin-top: 70px;
+}
+.subheader .blue {
+    z-index: 100;
+    color: #006ae2;
+}
+.subheader_line {
+    display: flex;
+    justify-content: center;
+}
+.subheader_line .line {
+    width: 210px;
+    height: 15px;
+    background-color: #f1e6a7;
+    margin-right: 166px;
+    margin-top: -32px;
+    z-index: 10;
+}
 input::placeholder {
-    font-size: 12px;
-    padding-left: 10px;
     color: #9d9d9d;
 }
 .search_section {
@@ -100,26 +119,32 @@ input::placeholder {
     position: relative;
     align-items: center;
     justify-content: center;
+    margin-top: -30px;
 }
 .search_bar {
     display: flex;
     position: absolute;
-    margin-right: 155px;
+    margin-right: 75px;
 }
 .search_bar input {
     width:250px;
     height: 45px;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #fcfcfc;
     border: 2px solid #9d9d9d;
+    padding-left: 10px;
+    font-size: 12px;
 }
 .searchBtn {
     display: flex;
     position: absolute;
-    margin-left: 140px;
+    margin-left: 220px;
+}
+.searchBtn button:hover {
+    border: 2px solid black;
 }
 .searchBtn button {
-    background-color: #f2f2f2;
+    background-color: #fcfcfc;
     border: 2px solid #9d9d9d;
     width: 45px;
     height: 45px;
@@ -128,14 +153,17 @@ input::placeholder {
 }
 .searchBtn i {
     color: #9d9d9d;
-    padding: px;
 }
-.consult_img {
-    margin-left: 850px;
-    width: 250px;
+.header_img {
     height: 250px;
-    margin-top: -30px;
+    margin-top: -40px;
+    margin-left: 980px;
 }
+.header_img img {
+    width: 180px;
+    height: 180px;
+}
+
 /* category section */
 .category{
     display:flex;
@@ -150,6 +178,9 @@ input::placeholder {
     padding: 0 8px;
     border-radius: 5px;
 }
+#ed_target:hover {
+    border: 2px solid black;
+}
 .category .optional #ed_field{
     width:120px;
     height:47px;
@@ -159,6 +190,9 @@ input::placeholder {
     margin:23px 11px 0 0;
     padding: 0 8px;
     border-radius: 5px;
+}
+#ed_field:hover {
+    border: 2px solid black;
 }
 .writeBtn {
     display: flex;
@@ -175,6 +209,11 @@ input::placeholder {
     width: 120px;
     height: 47px;
 }
+.writeBtn button:hover {
+    color: #033075;
+    background-color: white;
+    border: 3px solid #033075;
+}
 /* consult list */
 .consult_list a .header {
     color: black;
@@ -185,6 +224,10 @@ input::placeholder {
     color: #9d9d9d;
     font-size: 20px;
     padding: 10px 30px;
+}
+.question_box:hover {
+    background: #f6fbfe;
+    border: 2px solid dodgerblue;
 }
 .question_box {
     border: 1px solid #033075;
