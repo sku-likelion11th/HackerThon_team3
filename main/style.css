@@ -257,6 +257,9 @@ a {
         align-items: flex-start;
         padding: 8px 24px;
     }
+    .navbar_logo img{
+        margin-left:0px;
+    }
     .navbar_menu{
         display: none;
         flex-direction: column;
@@ -282,7 +285,7 @@ a {
     /* main */
     .main{
         white-space: initial;
-        margin-top:42px;
+        margin-top:0px;
     }
 
     /*main > first */
