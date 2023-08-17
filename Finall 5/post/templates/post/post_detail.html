@@ -1,0 +1,46 @@
+{% block content %}
+  <h1>{{ object.title }}</h1>
+  <p>{{ object.content }}</p>
+  <small>{{ object.author }} / {{ object.created_at|date:"Y-m-d H:i:s" }}</small>
+  {% if user.id == object.author.id %}
+  <a href="{% url 'post_edit' pk=object.id %}">게시물 수정</a>
+  {% endif %}
+  <hr>
+  <h2>댓글 목록</h2>
+  <ul>
+  {% for comment in object.comments.all %}
+    <li>
+      {{ comment.author }}: {{ comment.content }} <small>({{ comment.created_at|date:"Y-m-d H:i:s" }})</small>
+      {% if user.id == comment.author.id %}
+        <a href="#" class="edit-comment">수정</a>
+        <form method="post" action="{% url 'comment_edit' comment_id=comment.id %}" class="edit-comment-form" style="display:none;">
+          {% csrf_token %}
+          <textarea name="content">{{ comment.content }}</textarea>
+          <button type="submit">수정 적용</button>
+        </form>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+
+  <h2>댓글 작성</h2>
+  <form method="post" action="{% url 'comment_create' pk=object.pk %}">
+    {% csrf_token %}
+    <textarea name="content"></textarea>
+    <button type="submit">댓글 작성</button>
+  </form>
+  <a href="{% url 'post_list' %}">게시글 목록으로 돌아가기</a>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  document.querySelectorAll('.edit-comment').forEach(function(editCommentButton) {
+    editCommentButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      const editCommentForm = editCommentButton.nextElementSibling;
+      // 폼의 표시 및 숨기기를 토글합니다.
+      editCommentForm.style.display = editCommentForm.style.display === 'none' ? '' : 'none';
+    });
+  });
+</script>
+{% endblock %}

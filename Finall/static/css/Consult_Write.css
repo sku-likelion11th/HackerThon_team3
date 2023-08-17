@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'GangwonState';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.gangwon-font {
+font-family: 'GangwonState', sans-serif;
+}
+.display-container{
+margin: auto;
+max-width: 800px;   
+margin-left: auto;
+margin-right: auto;
+min-height: 100vh;
+border-left: 1px solid #9d9d9d;
+border-right: 1px solid #9d9d9d;
+border-bottom: 1px solid #9d9d9d;
+}
+a {
+text-decoration: none;
+}
+
+/* navbar section */
+.navbar {
+background-color: #033075;
+padding: 8px 12px;
+}
+.navbar_logo img {
+width: 130px;
+height: 25px;
+margin-left: 15px;
+}
+.navbar_menu {
+display: flex;
+list-style: none;
+padding-left: 0;
+margin-bottom: 0;
+margin-right: 90px;
+}
+.navbar_menu li {
+padding: 8px 12px;
+}
+.navbar a {
+color: white;
+}
+.navbar_menu li:hover {
+background-color: #f0f4f5;
+border-radius: 4px;
+}
+.navbar_menu li:hover > a {
+color: #033075;
+}
+.gotoMP {
+    margin-right: 10px;
+}
+.navbar_login {
+list-style: none;
+color: #f0f4f5;
+display: flex;
+padding-left: 0;
+margin-bottom: 0;
+margin-right: 20px;
+font-size: 12px;
+}
+.navbar_login li:hover {
+background-color: #f0f4f5;
+border-radius: 4px;
+padding: 8px 4px;
+}
+.navbar_login li:hover > a {
+color: #033075;
+}
+.navbar_login i{
+padding-left: 5px;
+}
+.navbar_toggleBtn {
+display: none;
+position: absolute;
+right: 32px;
+font-size: 20px;
+}
+.navbar_toggleBtn:hover i:hover {
+color: #f0f4f5;
+}
+
+/* content section */
+.content_section {
+    margin-top: 56px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.content_header {
+    padding: 14px 0;
+    font-size: 24px;
+}
+.content_tool p {
+    margin-bottom: 10px;
+    color: #565c65;
+}
+.tool_text input{
+    width: 715px;
+    height: 45px;
+    padding: 0 16px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+textarea {
+    resize: none;
+    width: 715px;
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+/* categort section */
+.tool_category_header p {
+    margin-bottom: 10px;
+}
+.tool_category {
+    display:flex;
+}
+#category {
+    width:120px;
+    height:47px;
+    font-size:16px;
+    stroke:2px solid #033075;
+    color:#9D9D9D;
+    margin:23px 11px 0px 10px;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+.tool_category select:hover {
+    border: 2px solid black;
+}
+#category2 {
+    width:120px;
+    height:47px;
+    font-size:16px;
+    stroke:2px solid #033075;
+    color:#9D9D9D;
+    margin:23px 11px 0 0;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+/* tool operate */
+.tool_operate {
+    margin-top: 30px;
+}
+.tool_operate ul {
+    padding: 0 20px;
+}
+.tool_questionBtn {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    
+}
+.tool_questionBtn button {
+    color: white;
+    background-color: #3382e9;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 715px;
+    height: 50px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_login {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_toggleBtn{
+        display: block;
+    }
+    .navbar_menu.active, .navbar_login.active {
+        display: flex;
+    }
+}

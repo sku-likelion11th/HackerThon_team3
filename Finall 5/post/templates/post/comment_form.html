@@ -1,0 +1,12 @@
+<form method="post" action="{% url 'comment_create' pk=post.pk %}">
+  {% csrf_token %}
+  <p>
+    <label for="content">댓글 내용</label>
+    <textarea name="content" id="content" rows="5" cols="40" required></textarea>
+  </p>
+  {% for category in categories %}
+  <label>{{ category.name }}</label>
+  <input type="checkbox" name="categories" value="{{ category.id }}">
+  {% endfor %}
+  <button type="submit">댓글 작성</button>
+</form>
