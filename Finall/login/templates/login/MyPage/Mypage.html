@@ -15,20 +15,20 @@
         <!-- nav section -->
         <nav class="navbar fixed-top d-flex justify-content-between align-items-center">
             <div class="navbar_logo">
-                <a href="../main/index.html"><img src={% static 'img/logo.png' %} alt="브랜드로고"></a>
+                <a href="{% url 'main' %}"><img src="{% static 'img/logo.png'%}" alt="브랜드로고"></a>
             </div>
             <ul class="navbar_menu">
-                <li><a href="../Education/Education.html">맞춤교육</a></li>
-                <li><a href="../Benefit/Benefit.html">맞춤혜택</a></li>
-                <li><a href="../Consult/Consult.html">맞춤상담</a></li>
+                <li><a href="{% url 'education' %}">맞춤교육</a></li>
+                <li><a href="{% url 'benefit' %}">맞춤혜택</a></li>
+                <li><a href="{% url 'post_list' %}">맞춤상담</a></li>
             </ul>
             <!--변경사항-->
             <ul class="navbar_login">
                 {% if user.is_authenticated %}
-                    <li class="logout mx-2"><a href="{% url 'logout' %}">로그아웃<i class="fa-regular fa-user"></i></a></li>
-                    <li class="nav_mypage"><a href="{% url 'mypage' %}">마이페이지</a></li>
+                    <li><a href="{% url 'logout' %}">로그아웃<i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="{% url 'mypage' %}">마이페이지<i class="fa-regular fa-user"></i></a></li>
                 {% else %}
-                    <li class="nav_login"><a href="{% url 'login' %}">로그인<i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="{% url 'login' %}">로그인<i class="fa-regular fa-user"></i></a></li>
                 {% endif %}
             </ul>
             <!--변경사항-->
@@ -50,12 +50,10 @@
             <!-- form 태그 추가 -->
             <form method="post" action="{% url 'mypage' %}">
                 {% csrf_token %}
-                <div class="inform_line">
-                    <div class="inform">
-                        <p>개인 정보 </p>  
-                    </div>
-                    <div class="line"></div>
+                <div class="inform d-flex justify-content-center">
+                    <p>개인 정보 </p>  
                 </div>
+                <div class="line"></div>
                 <div class="correct">
                     <div class="correct_email d-flex justify-content-center">
                         <p>이메일</p>
@@ -68,12 +66,10 @@
                         <input type="text" name="username" required><br>
                     </div>
                 </div>
-                <div class="newinform_line">
-                    <div class="newinform">
-                        <p>비밀번호 변경</p>
-                    </div>
-                    <div class="line"></div>
+                <div class="newinform d-flex justify-content-center">
+                    <p>비밀번호 변경</p>
                 </div>
+                <div class="line"></div>
                 <div class="correct">
                     <div class="correct_newpw d-flex justify-content-center">
                         <p>현재 비밀번호 입력</p>

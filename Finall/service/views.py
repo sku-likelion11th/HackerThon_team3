@@ -4,7 +4,7 @@ import json
 from django.core.paginator import Paginator, PageNotAnInteger
 
 def main_page(request):
-    return render(request, 'service/index.html')
+    return render(request, 'main/index.html')
 
 # Create your views here.
 def api_service_search(request):

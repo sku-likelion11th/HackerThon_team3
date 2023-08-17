@@ -15,12 +15,12 @@
         <!-- navigation section -->
         <nav class="navbar fixed-top d-flex justify-content-between align-items-center">
             <div class="navbar_logo">
-                <a href="../../main/index.html"><img src="../../img/logo.png" alt="브랜드로고"></a>
+                <a href="{% url 'main' %}"><img src="{% static 'img/logo.png'%}" alt="브랜드로고"></a>
             </div>
             <ul class="navbar_menu">
-                <li><a href="../../Education/Education.html">맞춤교육</a></li>
-                <li><a href="../../Benefit/Benefit.html">맞춤혜택</a></li>
-                <li><a href="../../Consult/Consult.html">맞춤상담</a></li>
+                <li><a href="{% url 'education' %}">맞춤교육</a></li>
+                <li><a href="{% url 'benefit' %}">맞춤혜택</a></li>
+                <li><a href="{% url 'post_list' %}">맞춤상담</a></li>
             </ul>
             <ul class="navbar_login">
                 {% if user.is_authenticated %}

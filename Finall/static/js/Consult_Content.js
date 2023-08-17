@@ -6,5 +6,3 @@ toggleBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
     login.classList.toggle('active');
 });
-
-

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'login',
     'post',
     'service',
-    'education_api',
+    'education',
     
     'rest_framework',
     'rest_framework.authtoken',

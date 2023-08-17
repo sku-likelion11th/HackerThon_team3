@@ -14,20 +14,20 @@
     <div class="display-container">
         <nav class="navbar fixed-top d-flex justify-content-between align-items-center">
             <div class="navbar_logo">
-                <a href="../main/index.html"><img src={% static 'img/logo.png' %} alt="브랜드로고"></a>
+                <a href="{% url 'main' %}"><img src="{% static 'img/logo.png'%}" alt="브랜드로고"></a>
             </div>
             <ul class="navbar_menu">
-                <li><a href="../Education/Education.html">맞춤교육</a></li>
-                <li><a href="../Benefit/Benefit.html">맞춤혜택</a></li>
-                <li><a href="../Consult/Consult.html">맞춤상담</a></li>
+                <li><a href="{% url 'education' %}">맞춤교육</a></li>
+                <li><a href="{% url 'benefit' %}">맞춤혜택</a></li>
+                <li><a href="{% url 'post_list' %}">맞춤상담</a></li>
             </ul>
             <!--변경사항-->
             <ul class="navbar_login">
                 {% if user.is_authenticated %}
-                    <li class="logout mx-2"><a href="{% url 'logout' %}">로그아웃<i class="fa-regular fa-user"></i></a></li>
-                    <li class="nav_mypage"><a href="{% url 'mypage' %}">마이페이지</a></li>
+                    <li><a href="{% url 'logout' %}">로그아웃<i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="{% url 'mypage' %}">마이페이지<i class="fa-regular fa-user"></i></a></li>
                 {% else %}
-                    <li class="nav_login"><a href="{% url 'login' %}">로그인<i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="{% url 'login' %}">로그인<i class="fa-regular fa-user"></i></a></li>
                 {% endif %}
             </ul>
             <!--변경사항-->
@@ -63,35 +63,29 @@
         <!-- category section -->
         <div class="category">
             <div class="flex_between">
-                <section class="optional">
-                    <form method="GET" action=".">
-                        <select name="category1" id="ed_target">
-                            <option>서비스 분류</option>
-                            <option value="1">개인/가구</option>
-                            <option value="2">소상공인</option>
-                            <option value="3">법인</option>
-                        </select>
-                </section>
-                <section class="optional">
-                    <form method="GET" action=".">
-                        <select name="category2" id="ed_field">
-                            <option>전체</option>
-                            <option value="1">부채관리</option>
-                            <option value="2">신용관리</option>
-                            <option value="3">재무설계</option>
-                            <option value="4">소비저축</option>
-                            <option value="5">위험관리</option>
-                            <option value="6">소비생활</option>
-                        </select>
-                    </form>
-                </section> 
-                <div class="category_searchBtn">
-                    <input type="submit" value="찾아보기">
-                </div> 
+                <form method="GET" action=".">
+                    <section class="optional">
+                            <select name="category1" id="ed_target">
+                                <option value="1">개인/가구</option>
+                                <option value="2">소상공인</option>
+                                <option value="3">법인</option>
+                            </select>
+                            <select name="category2" id="ed_field">
+                                <option value="1">부채관리</option>
+                                <option value="2">신용관리</option>
+                                <option value="3">재무설계</option>
+                                <option value="4">소비저축</option>
+                                <option value="5">위험관리</option>
+                                <option value="6">소비생활</option>
+                            </select>
+                    </section> 
+                    <div class="category_searchBtn">
+                        <input type="submit" value="찾아보기">
+                    </div>
+                </form>
             </div>
             <div class="writeBtn">
                 <a href="{% url 'post_create' %}"><button>글 작성하기</button></a>
-                </a>
             </div>
         </div>
         <!-- consult list -->
@@ -100,9 +94,8 @@
             {% for post in object_list %}
             <a href="{% url 'post_detail' post.pk %}">
             <div>
-                <a href="#">
+                <a href="{% url 'post_detail' post.pk %}">
                     <div class="question_box">
-                        <a href="{% url 'post_detail' post.pk %}">
                         <div class="header">{{ post.title }}</div>
                         <div class="content">{{ post.content }}</div>
                         <div class="line"></div>
