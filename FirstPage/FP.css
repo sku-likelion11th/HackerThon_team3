@@ -11,6 +11,7 @@ body {
 /* header section */
 .headerpart {
     display: flex;
+    justify-content: space-between;
 }
 .login_header {
     color: white;
@@ -54,7 +55,6 @@ body {
 /* tool-part */
 .login_tool {
     width: 350px;
-    margin-left: 350px;
     margin-top: 100px;
 }
 .login_border {
@@ -215,9 +215,8 @@ input::placeholder {
     }
     /* tool-part */
     .login_tool{
-        display: grid;
+        
         top:105px;
-        margin-left: 0;
     }
     .tool_logo {
         display: block;
