@@ -5,14 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=w, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="{% static 'js/Signup.js' %}" defer></script>
-    <link rel="stylesheet" href="{% static 'css/Signup.css' %}">
+    <script src="{% static 'js/login.js' %}" defer></script>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
     <script src="https://kit.fontawesome.com/855cb859ed.js" crossorigin="anonymous"></script><!-- font awesome 연결링크 -->
     <script>
         function displayAlert(message) {
           alert(message);
         }
       </script>
+      <style>
+        .error {
+            color: red;
+        }
+    </style>
+        <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const loginForm = document.querySelector("#login-form"); // 폼 요소의 ID 지정
+            
+                    loginForm.addEventListener("submit", async function (event) {
+                        event.preventDefault();
+            
+                        const csrfToken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+                        const formData = new FormData(loginForm);
+            
+                        try {
+                            const response = await fetch(loginUrl, {
+                                method: "POST",
+                                headers: {
+                                    "X-CSRFToken": csrfToken,
+                                },
+                                body: formData,
+                            });
+            
+                            if (response.ok) {
+                                // 로그인 성공 시 원하는 페이지로 이동
+                                window.location.href = "/posts/";
+                            } else {
+                                const errorMessage = document.querySelector(".response-message");
+            
+                                errorMessage.innerText = "잘못된 아이디나 패스워드입니다.";
+                                errorMessage.classList.add("error");
+                                errorMessage.classList.remove("success");
+                            }
+                        } catch (error) {
+                            console.error("Error while logging in:", error);
+                        }
+                    });
+                });
+        </script>
     <title>FINALL</title>
 </head>
 <body>
@@ -57,13 +97,12 @@
                             <input type="password" name="{{ serializer.fields.password.field_name }}" id="{{ serializer.fields.password.auto_id }}" placeholder="비밀번호를 입력해주세요." pattern=".{8,25}" title="8자 이상 입력하시오.(최대 25자)" required>
                         </div>
                         <div class="tool_checkbox">
-                            <input type="checkbox" id="check1">
-                            <span>아이디 저장</span>
-                            <label for="check1"></label>
+                            <div class="checkbox_input"><input type="checkbox" id="check1"></div>
+                            <div><p>아이디 저장</p></div>
                         </div>
                         <div class="tool_loginBtn">
                             <a href="#">
-                                <button type="submit">로그인</button>
+                                <button type="submit">Login</button>
                             </a>
                     </form>
                     {% if error_message %}
@@ -72,10 +111,12 @@
                         </script>
                     {% endif %}
                     <div class="tool_forgot">
-                        <p><a href="{% url 'password' %}">Forgot password?</a></p>
+                        <a href="{% url 'password' %}"><p>Forgot password?</p></a>
                     </div>
-                    <div class="tool_line">
-                            <p>or</p>
+                    <div class="tool_line_section">
+                            <div class="tool_line"></div>
+                            <div><p>or</p></div>
+                            <div class="tool_line"></div>
                     </div>
                     <div class="tool_icon">
                         <div class="google">

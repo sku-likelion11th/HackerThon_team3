@@ -1,6 +1,5 @@
 function handleLogin(event) {
     event.preventDefault();
-
     var xhr = new XMLHttpRequest();
     xhr.open('POST', '/login/', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -19,3 +18,37 @@ function handleLogin(event) {
     xhr.send(new FormData(event.target));
     return false;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loginForm = document.querySelector("#login-form"); // 폼 요소의 ID 지정
+
+    loginForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const csrfToken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+        const formData = new FormData(loginForm);
+
+        try {
+            const response = await fetch(loginUrl, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": csrfToken,
+                },
+                body: formData,
+            });
+
+            if (response.ok) {
+                // 로그인 성공 시 원하는 페이지로 이동
+                window.location.href = "/posts/";
+            } else {
+                const errorMessage = document.querySelector(".response-message");
+
+                errorMessage.innerText = "잘못된 아이디나 패스워드입니다.";
+                errorMessage.classList.add("error");
+                errorMessage.classList.remove("success");
+            }
+        } catch (error) {
+            console.error("Error while logging in:", error);
+        }
+    });
+});
