@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/Consult.css' %}">
+    <script src="{% static 'js/Consult.js' %}"></script>
+    <script src="https://kit.fontawesome.com/855cb859ed.js" crossorigin="anonymous"></script><!-- font awesome 연결링크 -->
+    <title>맞춤상담 - FINALL</title>
+</head>
+<body class="gangwon-font">
+    <div class="display-container">
+        <nav class="navbar fixed-top d-flex justify-content-between align-items-center">
+            <div class="navbar_logo">
+                <a href="{% url 'main' %}"><img src={% static 'img/logo.png' %} alt="브랜드로고"></a>
+            </div>
+            <ul class="navbar_menu">
+                <li><a href="{% url 'education' %}">맞춤교육</a></li>
+                <li><a href="{% url 'benefit' %}">맞춤혜택</a></li>
+                <li><a href="{% url 'consult' %}">맞춤상담</a></li>
+            </ul>
+            <!--변경사항-->
+            <ul class="navbar_login">
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">로그아웃<i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="{% url 'mypage' %}">마이페이지<i class="fa-regular fa-user"></i></a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">로그인<i class="fa-regular fa-user"></i></a></li>
+                {% endif %}
+            </ul>
+            <!--변경사항-->
+            <a href="#" class="navbar_toggleBtn"><i class="fa-solid fa-bars"></i></a>
+        </nav>
+        <!-- header section -->
+        <div class="header_section">
+            <div class="header">
+                <p>맞춤상담</p>
+                <div class="header_line"></div>
+            </div>
+            <div class="subheader d-flex justify-content-center">
+                <p class="blue">내 상황에 맞는 상담</p><p>이 궁금하다면?</p>
+            </div>
+            <div class="subheader_line"><div class="line"></div></div>
+            <div class="search_section">
+                <div class="search_bar">
+                    <input type="text" placeholder="키워드를 입력해주세요.">
+                </div>
+                <div class="searchBtn">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="header_img">
+                    <img src={% static 'img/professor.png' %} alt="">
+                </div>
+            </div>
+        </div>
+        <!-- category section -->
+        <div class="category">
+            <section class="optional">
+                <select id="ed_target">
+                    <option>서비스 분류</option>
+                    <option value="">개인/가구</option>
+                    <option value="">소상공인</option>
+                    <option value="">법인</option>
+                </select>
+            </section>
+            <section class="optional">
+                <select id="ed_field">
+                    <option>전체</option>
+                    <option value="">부채관리</option>
+                    <option value="">신용관리</option>
+                    <option value="">재무설계</option>
+                    <option value="">소비저축</option>
+                    <option value="">위험관리</option>
+                    <option value="">소비생활</option>
+                </select>
+            </section>
+            <div class="writeBtn">
+                <a href="./Consult_Write/CW.html">
+                    <button>글 작성하기</button>
+                </a>
+            </div>
+        </div>
+        <!-- consult list -->
+
+        <div class="consult_list">
+            {% block content %}
+            {% for post in object_list %}
+            <a href="{% url 'post_detail' post.pk %}">
+            <div>
+                <a href="#">
+                    <div class="question_box">
+                        <div class="header">{{ post.title }}</div>
+                        <div class="content">{{ post.content }}</div>
+                        <div class="line"></div>
+                        <div class="answer">{{ post.author }}</div>
+                        <div class="line"></div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+            {% endblock %}
+        </div>
+
+        <div class="pagination d-flex justify-content-center">
+            <a class="cramps" href="#"> << </a>
+            <a class="cramps" href="#"> < </a>
+            <a class="active" href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a class="cramps" href="#"> > </a>
+            <a class="cramps" href="#"> >> </a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

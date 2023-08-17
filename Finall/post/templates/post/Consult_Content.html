@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/Consult_Content.css' %}">
+    <script src="{% static 'js/Consult_Content.js' %}" defer></script>
+    <script src="https://kit.fontawesome.com/855cb859ed.js" crossorigin="anonymous"></script><!-- font awesome 연결링크 -->
+    <title>맞춤상담 - FINALL</title>
+</head>
+<body class="gangwon-font">
+    <div class="display-container">
+        <!-- navigation section -->
+        <nav class="navbar fixed-top d-flex justify-content-between align-items-center">
+            <div class="navbar_logo">
+                <a href="../../main/index.html"><img src="../../img/logo.png" alt="브랜드로고"></a>
+            </div>
+            <ul class="navbar_menu">
+                <li><a href="../../Education/Education.html">맞춤교육</a></li>
+                <li><a href="../../Benefit/Benefit.html">맞춤혜택</a></li>
+                <li><a href="../../Consult/Consult.html">맞춤상담</a></li>
+            </ul>
+            <ul class="navbar_login">
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'logout' %}">로그아웃<i class="fa-regular fa-user"></i></a></li>
+                    <li><a href="{% url 'mypage' %}">마이페이지<i class="fa-regular fa-user"></i></a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">로그인<i class="fa-regular fa-user"></i></a></li>
+                {% endif %}
+            </ul>
+            <a href="#" class="navbar_toggleBtn"><i class="fa-solid fa-bars"></i></a>
+        </nav>
+        <!-- content section -->
+        <div class="content_section">
+            <!-- header_section -->
+            <div class="header_section">
+                <div class="header"><p>{{ object.title }}</p></div>
+                <div class="writer"><p>{{ object.author }}</p></div> <!-- small 태그 추가 -->
+                {{ object.created_at|date:"Y-m-d H:i:s" }}
+            </div>
+            <!-- incontent_section -->
+            <div class="incontent">
+                <p>{{ object.content }}</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="line"></div>
+            <!-- answer write section -->
+            <div class="answer_write_tool">
+                <div class="tool_write">
+                    <!--form 태그 수정-->
+                    <form method="post" action="{% url 'comment_create' pk=object.pk %}">
+                        {% csrf_token %}
+                        <label for="글작성">답변 내용</label>
+                        <fieldset><textarea name="content" cols="70" rows="3" placeholder="답변을 입력해주세요."></textarea></fieldset>
+                        <div class="writeBtn"><button type="submit">답변 작성</button></div>
+                    </form>
+                    <a href="{% url 'post_list' %}">게시글 목록으로 돌아가기</a>
+                    <!--form 태그 수정-->
+                </div>
+            </div>
+            <!-- answer section -->
+
+            <div class="answer_section">
+                {% for comment in object.comments.all %}
+                <div class="outsideheader"><p>답변</p></div>
+                <div class="answer_tool">
+                    <div class="tool_name"><p>{{ comment.author }}</p></div>
+                    <div class="tool_content">
+                        <p>
+                            {{ comment.content }}
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editButtons = document.querySelectorAll('.edit-comment');
+            editButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const form = this.nextElementSibling;
+                    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
