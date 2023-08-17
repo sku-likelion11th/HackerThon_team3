@@ -204,22 +204,36 @@ textarea {
         margin:42px auto;
         padding-left:30px;
     }
-    .tool_text input{
-        width:400px;
-        margin:auto;
+    .tool_text{
+        margin-right:40px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-right:30px;
         margin-bottom:30px;
     }
-    textarea{
-        width:400px;
+    .tool_text input{
+
+        max-width:100%;
+        margin:0 auto;
     }
     .tool_category_header p{
         margin-bottom:-15px;
     }
     .optional #ed_target{
         height:40px;
-        margin-left:0
+        margin-left:0;
     }
     .optional #ed_field{
         height:40px;
+    }
+    .tool_question_text{
+        max-width:100%;
+        margin:0 auto;
+        padding-right:30px;
+    }
+    textarea{
+        width:100%;
+        margin-left:0px;
+
     }
 }
