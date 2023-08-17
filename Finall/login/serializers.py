@@ -31,35 +31,41 @@ class LoginSerializer(serializers.Serializer):
         return token
   
 class RegisterSerializer(serializers.ModelSerializer):
-  email = serializers.EmailField(
-    required=True,
-    validators=[UniqueValidator(queryset=User.objects.all())],
-  )
-  password = serializers.CharField(
-    write_only=True,
-    required=True,
-    validators=[validate_password],
-  )
-  password2 = serializers.CharField(write_only=True, required=True)
-  
-  class Meta:
-    model = User
-    fields = ('username','password','password2','email')
-    
-  def validate(self, data):
-    if data['password'] != data['password2']:
-        raise serializers.ValidationError({"password": "패스워드 불일치"})
-    return data
-  
-  def create(self, validated_data):
-    user = User.objects.create_user(
-        username=validated_data['username'],
-        email=validated_data['email'],
+    email = serializers.EmailField(
+        required=True,
+        validators=[UniqueValidator(queryset=User.objects.all())],
     )
-    user.set_password(validated_data['password'])
-    user.save()
+    password = serializers.CharField(
+        write_only=True,
+        required=True,
+        validators=[validate_password],
+    )
+    password2 = serializers.CharField(write_only=True, required=True)
+    
+    class Meta:
+        model = User
+        fields = ('username','password','password2','email')
+        
+    def validate(self, data):
+        username = data["username"]
+        email = data["email"]
 
-    return user
+        if User.objects.filter(username=username).exists():
+            raise serializers.ValidationError({"username": "해당 사용자 이름을 가진 사용자가 이미 존재합니다."})  # 한국어 메시지로 변경
+        if User.objects.filter(email=email).exists():
+            raise serializers.ValidationError({"email": "이 필드는 고유해야 합니다."})  # 한국어 메시지로 변경
+
+        return data
+    
+    def create(self, validated_data):
+        user = User.objects.create_user(
+            username=validated_data['username'],
+            email=validated_data['email'],
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+
+        return user
   
 class UserUpdateSerializer(serializers.ModelSerializer):
     class Meta:

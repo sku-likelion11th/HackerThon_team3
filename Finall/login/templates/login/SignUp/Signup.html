@@ -32,6 +32,13 @@
                     </div>
                 </div>
             </div>
+            <div class = "login_alert">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+            </div>
             <div class="login_tool">
                 <div class="login_border">
                     <div class="tool_logo">

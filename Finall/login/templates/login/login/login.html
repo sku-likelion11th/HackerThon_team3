@@ -48,7 +48,7 @@
                     <div class="tool_subheader">
                         <p>Glad's your back..!</p>
                     </div>
-                    <form method="post">
+                    <form id="login-form" method="post" action="/login/" onsubmit="return handleLogin(event);">
                         {% csrf_token %}
                         <div class="tool_name">
                             <input type="id" name="{{ serializer.fields.username.field_name }}" id="{{ serializer.fields.username.auto_id }}" placeholder="아이디를 입력해주세요." autofocus required>
