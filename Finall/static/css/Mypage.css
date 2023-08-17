@@ -8,11 +8,9 @@
     font-family: 'GangwonState', sans-serif;
 }
 .display-container{
-    margin: auto;
     max-width: 1200px;   
     margin-left: auto;
     margin-right: auto;
-    min-height: 100vh;
 }
 a {
     text-decoration: none;
@@ -55,10 +53,13 @@ a {
     margin-right: 20px;
     font-size: 12px;
 }
+.logoutBtn {
+    margin-right: 15px;
+}
 .navbar_login li:hover {
     background-color: #f0f4f5;
     border-radius: 4px;
-    padding: 8px 4px;
+    padding: 6px 4px;
 }
 .navbar_login li:hover > a {
     color: #033075;
@@ -107,24 +108,41 @@ a {
 .content_section {
     margin-top: 20px;
 }
-.inform p {
-    font-size: 28px;
-    margin-right: 600px;
-    margin-top: 15px;
+.inform_tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.newinform p {
-    font-size: 28px;
-    margin-right: 555px;
-    margin-top: 15px;
+.newinform_tool{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.inform {
+    width: 720px;
+    font-size: 28px;
+    margin-top: 15px;
+    padding-left: 15px;
+}
+.newinform {
+    width: 720px;
+    font-size: 28px;
+    margin-top: 15px;
+    padding-left: 15px;
+}
+.mpbox {
+    width: 160px;
+    text-align: center;
+}
+
 .content_section p {
     margin-top: 6px;
 }
 .content_section .line {
-    border: 1px solid #033075;
+    border: 1px solid black;
     width: 720px;
-    margin-left: 240px;
     margin-top: -10px;
+    margin-bottom: 10px;
 }
 .content_section input {
     width:250px;
@@ -133,31 +151,20 @@ a {
     background-color: #f5f7fa;
     border: 2px solid #9d9d9d;
     font-size: 13px;
+    padding: 0 8px;
 }
 .correct {
     margin-top: 10px;
 }
-.correct_email p {
-    margin-right: 124px;
-}
-.correct_name p {
-    margin-right: 137px;
-}
-.correct_newpw p {
-    margin-right: 64px;
-}
-.correct_newpwcheck p {
-    margin-right: 50px;
-}
-.changeBtn button {
+.changeBtn input {
     color: white;
     padding-left: 5px;
     background-color: #033075;
     font-size: 13px;
     border: 1px solid white;
     border-radius: 5px;
-    width: 80px;
-    height: 30px;
+    width: 90px;
+    height: 36px;
     margin: 10px 0;
 }
 .tab {
@@ -167,6 +174,19 @@ a {
     margin-top: 50px;
     overflow: hidden;
     border-bottom: 1px solid black;
+  }
+  .tabheader {
+    border-bottom: 1px solid black;
+    width: 1200px;
+  }
+  .tabmargin {
+    display: flex;
+    width: 1000px;
+    margin-left: 100px;
+    font-size: 18px;
+  }
+  .tabheader_header {
+    margin-right: 310px;
   }
   
   /* Style the buttons inside the tab */
@@ -195,16 +215,17 @@ a {
   
   /* Style the tab content */
   .tabcontent {
-     display: none; 
+    display: none; 
     padding: 6px 12px;
     border: none;
     width: 1200px;
-    margin-left: 160px;
+    margin-left: 148px;
   }
   .tabcontent a {
     color: #9d9d9d;
   }
   .tablist .inheader{
+    color: black;
     width:200px;
     padding:0 5px;
     overflow:hidden;
@@ -229,9 +250,48 @@ a {
   }
   .tabcontent .incontent {
     margin-left: 150px;
-    width:70px;
+    width:300px;
     padding:0 5px;
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
   }
+
+
+
+
+  @media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_logo {
+        margin: 0;
+    }
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_login {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar_toggleBtn{
+        display: block;
+    }
+    .navbar_menu.active, .navbar_login.active {
+        display: flex;
+    }
+}
