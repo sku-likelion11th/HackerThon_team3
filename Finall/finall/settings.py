@@ -141,3 +141,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SESSION_ENGINE = 'django.contrib.sessions.backends.db' 
 
 LOGOUT_REDIRECT_URL = '/login'
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

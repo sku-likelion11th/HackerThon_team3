@@ -29,6 +29,7 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from rest_framework import serializers
 
 
 def main(request):
@@ -72,7 +73,18 @@ class RegisterView(UserPassesTestMixin, APIView):
             user = serializer.save()
             return HttpResponseRedirect(reverse('login'))
         else:
-            return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            for field, message_list in serializer.errors.items():
+                for message in message_list:
+                    if field == 'username':
+                        if 'A user with that username already exists.' == message:
+                            message = '해당 사용자 이름을 가진 사용자가 이미 존재합니다.'
+                    elif field == 'email':
+                        if 'This field must be unique.' == message:
+                            message = '새로운 정보로 회원가입 해주세요.'
+                    messages.error(request, message)
+            return self.get(request)
+        
+    
 
 class LoginView(APIView):
     serializer_class = LoginSerializer
@@ -176,6 +188,7 @@ class PasswordResetView(AnonymousRequiredMixin, View):
     def post(self, request):
         username = request.POST.get("username")
         email = request.POST.get("email")
+        old_password = request.POST.get("old_password")  # 기존 비밀번호
         new_password1 = request.POST.get("new_password1")
         new_password2 = request.POST.get("new_password2")
 
@@ -185,13 +198,16 @@ class PasswordResetView(AnonymousRequiredMixin, View):
             user = None
             
         if user is not None:
-            if new_password1 == new_password2:
-                user.set_password(new_password1)
-                user.save()
-                messages.success(request, "비밀번호 변경이 완료되었습니다.")
-                return HttpResponseRedirect(reverse_lazy("login"))
+            if user.check_password(old_password):  # 기존 비밀번호가 일치하는지 확인
+                if new_password1 == new_password2:
+                    user.set_password(new_password1)
+                    user.save()
+                    messages.success(request, "비밀번호 변경이 완료되었습니다.")
+                    return HttpResponseRedirect(reverse_lazy("login"))
+                else:
+                    messages.error(request, "새 비밀번호가 일치하지 않습니다.")
             else:
-                messages.error(request, "새 비밀번호가 일치하지 않습니다.")
+                messages.error(request, "현재 비밀번호가 일치하지 않습니다.")  # 기존 비밀번호 확인 메시지 추가
         else:
             messages.error(request, "아이디 또는 이메일이 잘못되었습니다.")
 

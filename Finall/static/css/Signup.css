@@ -186,6 +186,33 @@ input::placeholder {
     margin: 0 5px 0 5px;
 }
 
+/* 에러 메시지 위치 조절 */
+.login_alert {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+/* 에러 메시지 크기 및 스타일 조절 */
+.login_alert .alert {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+
+    /* 크기 조절 (변경을 원하시면 수정) */
+    min-width: 300px;
+    min-height: 40px;
+    max-width: 1000px;
+    max-height: 1000px;
+
+    text-align: center;
+    font-size: 16px;
+}
+
 .signBtn{
     display:none;
 }
