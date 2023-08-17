@@ -39,7 +39,7 @@ def category(request):
     return render(request, 'login/Category/category.html')
 
 def benefit(request):
-    return render(request, 'service/Benefit.html')
+    return render(request, 'benefit/Benefit.html')
 
 def education(request):
     return render(request, 'education/education.html')

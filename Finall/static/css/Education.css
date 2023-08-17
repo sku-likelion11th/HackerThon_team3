@@ -8,11 +8,9 @@
     font-family: 'GangwonState', sans-serif;
 }
 .display-container{
-    margin: auto;
     max-width: 1200px;   
     margin-left: auto;
     margin-right: auto;
-    min-height: 100vh;
 }
 a {
     text-decoration: none;
@@ -196,10 +194,12 @@ input::placeholder {
 /*페이지네이션*/
 .page_section{
     margin: 50px 25px 50px 25px;
+    max-width: 1200px;
 }
 .page_line1 {
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr
 }
 .page_line2 {
     display: flex;
