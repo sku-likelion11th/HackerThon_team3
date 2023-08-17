@@ -309,23 +309,24 @@ input::placeholder {
     .subheader{
         font-size: 20px;
         margin-top:10px;
+        padding-right:130px;
     }
     .subheader_line .line{
         width:150px;
-        margin-right:120px;
+        margin-right:250px;
     }
     .search_section{
         margin-top: 0px;
     }
     .search_bar{
-        margin-right: 50px;
+        margin-right: 190px;
     }
     .search_bar input{
         width:210px;
         height:40px;
     }
     .searchBtn{
-        margin-left: 205px;
+        margin-left: 62px;
     }
     .searchBtn button{
         padding:5px;
@@ -334,7 +335,8 @@ input::placeholder {
     .header_img{
         width: 120px;
         height:120px;
-        margin-left:400px;
+        margin:-50px auto 0px;
+        padding-left:180px;
     }
     .header_img img{
         width:120px;
@@ -355,9 +357,14 @@ input::placeholder {
         margin:10px 5px 0px 20px;
     }
     .writeBtn{
-        margin:10px 11px 0 350px;
+        position:static;
+        margin:10px auto 0px;
+        padding-left:80px;
     }
-
+    .writeBtn button{
+        height:35px;
+        padding:0 8px;
+    }
     /* consult list */
     .consult_list{
         align-items: center;
