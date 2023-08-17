@@ -202,4 +202,22 @@ textarea {
     .navbar_menu.active, .navbar_login.active {
         display: flex;
     }
+
+    /* content_section */
+    .content_section{
+        margin-top:42px;
+    }
+    .answer_write_tool{
+        margin-right:40px;
+    }
+    .tool_write{
+        max-width:80%;
+        margin:0 auto;
+
+    }
+    textarea{
+        width:100%;
+        margin-left:0px;
+
+    }
 }
