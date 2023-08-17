@@ -153,7 +153,6 @@ input::placeholder {
 }
 .searchBtn i {
     color: #9d9d9d;
-    padding: px;
 }
 .header_img {
     margin-left: 980px;
@@ -161,6 +160,7 @@ input::placeholder {
     height: 220px;
     margin-top: -50px;
 }
+
 
 /*카테고리*/
 .category{
@@ -263,10 +263,8 @@ input::placeholder {
         align-items: flex-start;
         padding: 8px 24px;
     }
-    .navbar_logo{
-
-        margin-right: 115px;
-        align-items: start;
+    .navbar_logo img{
+        margin-left:0px;
     }
     .navbar_menu{
         display: none;
@@ -274,7 +272,6 @@ input::placeholder {
         align-items: center;
         width: 100%;
         margin-bottom: 20px;
-        margin-top: 10px;
     }
     .navbar_menu li{
         width: 100%;
@@ -283,7 +280,6 @@ input::placeholder {
     .navbar_login {
         display: none;
         justify-content: center;
-        margin-right: 90px;
         width: 100%;
     }
     .navbar_toggleBtn{
@@ -294,34 +290,48 @@ input::placeholder {
     }
 
     /*header */
-    .header .title{
-        margin-left:10px;
-        padding-top:10px;
+    .header_section{
+        margin-top:42px;
+    }
+    .hedaer p{
         font-size:30px;
     }
-    .header .search_form{
-        padding-top:25px;
+    .subheader{
+        font-size: 20px;
+        margin-top:10px;
     }
-    .header .search_education{
-        width:300px;
-        height:30px;
-        margin-left:20px;
+    .subheader_line .line{
+        width:150px;
+        margin-right:120px;
     }
-    .header .submit_education{
-        width:40px;
-        height:30px;
-        font-size:16px;
+    .search_section{
+        margin-top: 0px;
     }
-    .header .category_education{
-        width:70px;
-        height:30px;
-        font-size:16px;
+    .search_bar{
+        margin-right: 50px;
     }
-    .header img{
-        width:100px;
-        height:150px;
-        margin-left:15px;
+    .search_bar input{
+        width:210px;
+        height:40px;
     }
+    .searchBtn{
+        margin-left: 205px;
+    }
+    .searchBtn button{
+        padding:5px;
+        height:40px;
+    }
+    .header_img{
+        width: 120px;
+        height:120px;
+        margin-left:400px;
+    }
+    .header_img img{
+        width:120px;
+        height:120px;
+    }
+
+
     /*카테고리*/
     .category .optional #ed_target{
         width:80px;
@@ -337,26 +347,16 @@ input::placeholder {
     }
 
     /*페이지네이션 */
-    .page{
-        margin-top:25px;
-        margin-left:20px;
-        grid-template-columns: 1fr 1fr;
-        gap:10px 15px;
+    .page_section{
+        margin:20px 0 20px 0;
     }
-    .page .section{
-        width:250px;
-        height:300px;
+    .page_line1{
+        flex-direction:column;
+        align-items: center;
     }
-    .page .section img{
-        margin-top:10px;
-        width:200px;
-        height:130px;
-        margin-left:25px;
-    }
-    .page .section p{
-        margin-left:10px;
-        margin-top:10px;
-        font-size:14px;
+    .page_line2{
+        flex-direction: column;
+        align-items: center;
     }
 
 
