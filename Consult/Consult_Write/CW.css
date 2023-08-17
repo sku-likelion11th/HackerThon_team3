@@ -173,6 +173,9 @@ textarea {
         align-items: flex-start;
         padding: 8px 24px;
     }
+    .navbar_logo img{
+        margin-left:0px;
+    }
     .navbar_menu{
         display: none;
         flex-direction: column;
@@ -194,5 +197,29 @@ textarea {
     }
     .navbar_menu.active, .navbar_login.active {
         display: flex;
+    }
+
+    /* content section */
+    .content_section{
+        margin:42px auto;
+        padding-left:30px;
+    }
+    .tool_text input{
+        width:400px;
+        margin:auto;
+        margin-bottom:30px;
+    }
+    textarea{
+        width:400px;
+    }
+    .tool_category_header p{
+        margin-bottom:-15px;
+    }
+    .optional #ed_target{
+        height:40px;
+        margin-left:0
+    }
+    .optional #ed_field{
+        height:40px;
     }
 }
