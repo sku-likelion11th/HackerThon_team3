@@ -155,8 +155,9 @@ input::placeholder {
     color: #9d9d9d;
 }
 .header_img {
-    height: 250px;
-    margin-top: -40px;
+    width:220px;
+    height: 220px;
+    margin-top: -50px;
     margin-left: 980px;
 }
 .header_img img {
@@ -267,10 +268,13 @@ input::placeholder {
   }
 
 @media screen and (max-width: 576px) {
-    .navbar {
+ .navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 8px 24px;
+    }
+    .navbar_logo img{
+        margin-left:0px;
     }
     .navbar_menu{
         display: none;
@@ -293,5 +297,78 @@ input::placeholder {
     }
     .navbar_menu.active, .navbar_login.active {
         display: flex;
+    }
+
+    /*header */
+    .header_section{
+        margin-top:42px;
+    }
+    .hedaer p{
+        font-size:30px;
+    }
+    .subheader{
+        font-size: 20px;
+        margin-top:10px;
+    }
+    .subheader_line .line{
+        width:150px;
+        margin-right:120px;
+    }
+    .search_section{
+        margin-top: 0px;
+    }
+    .search_bar{
+        margin-right: 50px;
+    }
+    .search_bar input{
+        width:210px;
+        height:40px;
+    }
+    .searchBtn{
+        margin-left: 205px;
+    }
+    .searchBtn button{
+        padding:5px;
+        height:40px;
+    }
+    .header_img{
+        width: 120px;
+        height:120px;
+        margin-left:400px;
+    }
+    .header_img img{
+        width:120px;
+        height:120px;
+    }
+
+    /*카테고리*/
+    .category .optional #ed_target{
+        width:80px;
+        height:30px;
+        font-size:16px;
+        margin:10px 5px 0px 20px;
+    }
+    .category .optional #ed_field{
+        width:80px;
+        height:30px;
+        font-size:16px;
+        margin:10px 5px 0px 20px;
+    }
+    .writeBtn{
+        margin:10px 11px 0 350px;
+    }
+
+    /* consult list */
+    .consult_list{
+        align-items: center;
+    }
+    .consult_list a .content, .answer{
+        padding:5px 20px;
+    }
+    .question_box{
+        width:380px;
+        height:260px;
+        margin:auto;
+        margin:50px auto;
     }
 }
