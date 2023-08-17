@@ -8,9 +8,11 @@
     font-family: 'GangwonState', sans-serif;
 }
 .display-container{
+    margin: auto;
     max-width: 1200px;   
     margin-left: auto;
     margin-right: auto;
+    min-height: 100vh;
 }
 a {
     text-decoration: none;
@@ -23,14 +25,13 @@ a {
 .navbar_logo img {
     width: 130px;
     height: 25px;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 .navbar_menu {
     display: flex;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
-    margin-right: 90px;
 }
 .navbar_menu li {
     padding: 8px 12px;
@@ -49,23 +50,21 @@ a {
     list-style: none;
     color: #f0f4f5;
     display: flex;
+    padding-left: 0;
     margin-bottom: 0;
+    margin-right: 20px;
     font-size: 12px;
-}
-.navbar_login .nav_mypage, .nav_login{
-    margin-right: 15px;
 }
 .navbar_login li:hover {
     background-color: #f0f4f5;
     border-radius: 4px;
-    padding: 4px 4px;
-    margin-bottom: 0;
+    padding: 8px 4px;
 }
 .navbar_login li:hover > a {
     color: #033075;
 }
 .navbar_login i{
-    padding-left: 3px;
+    padding-left: 5px;
 }
 .navbar_toggleBtn {
     display: none;
@@ -108,16 +107,14 @@ a {
 .content_section {
     margin-top: 20px;
 }
-.inform_line {
-    display: flex;
-    flex-direction: column;
-}
 .inform p {
     font-size: 28px;
+    margin-right: 600px;
     margin-top: 15px;
 }
 .newinform p {
     font-size: 28px;
+    margin-right: 555px;
     margin-top: 15px;
 }
 .content_section p {
@@ -152,23 +149,17 @@ a {
 .correct_newpwcheck p {
     margin-right: 50px;
 }
-.changeBtn {
-    margin-top: 23px;
-    padding-right: 10px;
-}
-.changeBtn input {
+.changeBtn button {
     color: white;
     padding-left: 5px;
     background-color: #033075;
-    font-size: 16px;
+    font-size: 13px;
     border: 1px solid white;
     border-radius: 5px;
-    width: 100px;
-    height: 47px;
-    outline: none;
+    width: 80px;
+    height: 30px;
+    margin: 10px 0;
 }
-
-/* tap section */
 .tab {
     width: 1200px;
     height: 80px;

@@ -20,29 +20,28 @@ from .models import Post, Comment, Category, Category2
 from .serializers import PostSerializer, CommentSerializer
 from django.db.models import Q
 
-class PostListViewHtml(generic.ListView):
-    model = Post
-    template_name = 'post/Consult.html'
+class PostListViewHtml(generic.ListView):     
+    model = Post     
+    template_name = 'post/Consult.html'          
     
-    def get_queryset(self):
-        query = self.request.GET.get('q')
-        category1 = self.request.GET.get('category1')
-        category2 = self.request.GET.get('category2')
-        qs = Post.objects.all()
+    def get_queryset(self):         
+        query = self.request.GET.get('q')         
+        category1 = self.request.GET.get('category1')         
+        category2 = self.request.GET.get('category2')         
+        qs = Post.objects.all()          
+        if query:             
+            qs = qs.filter(Q(title__icontains=query))          
+            
+        if category1:             
+            cat1 = Category.objects.get(pk=int(category1))  # id 값으로 변경
+            qs = qs.filter(categories=cat1)          
 
-        if query:
-            qs = qs.filter(Q(title__icontains=query))
-
-        if category1:
-            cat1 = Category.objects.get(name=category1)
-            qs = qs.filter(categories=cat1)
-
-        if category2:
-            cat2 = Category2.objects.get(name=category2)
-            qs = qs.filter(categories2=cat2)
-
+        if category2:              
+            cat2 = Category2.objects.get(pk=int(category2))  # id 값으로 변경
+            qs = qs.filter(categories2=cat2)          
+            
         return qs
-        
+
 class PostDetailViewHtml(generic.DetailView):
     model = Post
     template_name = 'post/Consult_Content.html'

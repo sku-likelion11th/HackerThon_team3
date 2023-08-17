@@ -30,6 +30,23 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 
+
+def main(request):
+    return render(request, 'login/main/index.html')
+
+def category(request):
+    return render(request, 'login/Category/category.html')
+
+def benefit(request):
+    return render(request, 'service/Benefit.html')
+
+def education(request):
+    return render(request, 'education/education.html')
+
+def consult(request):
+    return render(request, 'post/Consult.html')
+
+
 class RegisterView(UserPassesTestMixin, APIView):
     renderer_classes = [TemplateHTMLRenderer]
     template_name = "login/register.html"
@@ -79,10 +96,24 @@ class LoginView(APIView):
             login(request, user)
             token, created = Token.objects.get_or_create(user=user)
             request.session['token'] = token.key
-            return HttpResponseRedirect(reverse('post_list'))
+            return HttpResponseRedirect(reverse('main'))
         else:
             messages.error(request, "아이디와 비밀번호를 확인해주세요.")
             return self.get(request, *args, **kwargs)
+        
+    def login_view(request):
+        if request.method == 'POST':
+            username = request.POST['username']
+            password = request.POST['password']
+            user = authenticate(request, username=username, password=password)
+
+            if user is not None:
+                login(request, user)
+                return redirect('main')  # 성공한 로그인 이후 리디렉션할 페이지
+            else:
+                return render(request, 'login.html', {'error_message': '잘못된 로그인 정보입니다.'})  # 오류 메시지를 context에 저장 후 리디렉션
+
+        return render(request, 'login.html')
     
 @method_decorator(login_required(login_url='login'), name='dispatch')
 class UserUpdateView(LoginRequiredMixin, View): 
@@ -133,12 +164,11 @@ class UserUpdateView(LoginRequiredMixin, View):
 class AnonymousRequiredMixin(AccessMixin):
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return HttpResponseRedirect(reverse_lazy("post_list"))  # 로그인한 사용자의 리디렉션 페이지 설정
+            return HttpResponseRedirect(reverse_lazy("main"))  # 로그인한 사용자의 리디렉션 페이지 설정
         return super().dispatch(request, *args, **kwargs)
     
 class PasswordResetView(AnonymousRequiredMixin, View): 
-    model = User
-    template_name = "login/user_update.html"
+    template_name = "login/Password/Password.html"
 
     def get(self, request):
         return render(request, self.template_name)

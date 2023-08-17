@@ -7,39 +7,44 @@
 .gangwon-font {
     font-family: 'GangwonState', sans-serif;
 }
-body{
-    margin: 0;
+.display-container{
+    margin: auto;
+    max-width: 1200px;   
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
 }
-a{
+a {
     text-decoration: none;
-    color: #f0f4f5;
 }
+/* navbar section */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #033075;
     padding: 8px 12px;
 }
-.navbar_logo {
-    font-size: 20px;
-    color: #f0f4f5;
-}
-.navbar_logo i{
-    color: #d49466;/* 색상 설정하기 */
+.navbar_logo img {
+    width: 130px;
+    height: 25px;
+    margin-left: 15px;
 }
 .navbar_menu {
     display: flex;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
+    margin-right: 90px;
 }
 .navbar_menu li {
     padding: 8px 12px;
 }
+.navbar a {
+    color: white;
+}
 .navbar_menu li:hover {
     background-color: #f0f4f5;
     border-radius: 4px;
+}
+.navbar_menu li:hover > a {
     color: #033075;
 }
 .navbar_login {
@@ -48,13 +53,16 @@ a{
     display: flex;
     padding-left: 0;
     margin-bottom: 0;
+    margin-right: 20px;
     font-size: 12px;
 }
-.navbar_login:hover {
+.navbar_login li:hover {
     background-color: #f0f4f5;
     border-radius: 4px;
-    color: #033075;
     padding: 8px 4px;
+}
+.navbar_login li:hover > a {
+    color: #033075;
 }
 .navbar_login i{
     padding-left: 5px;
@@ -73,39 +81,49 @@ a{
 /*header*/
 .main_category{
     display:flex;
-    justify-content: space-around;
-    padding-top:20px;
-    background-color:#F5F7FA;
+    justify-content: space-between;
+    padding-top: 56px;
+    background-color:#e2edff;
 }
-
+.category_header {
+    margin-left: 80px;
+}
 .main_category .category_main{
     margin-top:70px;
     font-size:50px;
     color:#4D4D4D;
 }
 .main_category .category_sub{
-    margin-top:-30px;
-    font-size:50px;
+    margin-top:-25px;
+    font-size:45px;
     color:#033075;
 }
 .main_category img{
-    margin-right:200px;
-    width:300px;
-    height:300px;
+    margin-right: 20px;
+    width:250px;
+    height:250px;
+    margin-bottom: 20px;
 }
 /*search form*/
 .search{
     text-align: center;
     margin-top:20px;
 }
+input::placeholder {
+    font-size: 14px;
+}
+input {
+    padding: 0 12px;
+}
 .search .search_text{
-    width:500px;
+    width:400px;
     height:50px;
     background-color: #F2F2F2;
     stroke: #9D9D9D;
+    border-radius: 5px;
 }
 .search .search_submit{
-    margin-left:10px;
+    border-radius: 5px;
     width:60px;
     height:50px;
     background-color: #033075;
@@ -116,26 +134,26 @@ a{
 /*category choice > radio*/
 .category_choice{
     margin-top:50px;
-    margin-left:750px;
+    margin-left:249px;
 }
 .category_choice .name{
-    font-size:40px;
+    font-size: 30px;
     font-weight: 900;
 }
 .category_choice .custom_radio{
-    margin:20px 0px 20px 40px;
+    margin: 25px 0px 20px 40px;
 }
 .category_choice .custom_radio .text_radio{
-    font-size:24px;
+    font-size: 18px;
 }
 
 
 /* category choice > checkbox*/
 .category_choice .custom_checkbox{
-    margin:20px 0px 20px 40px;
+    margin: 25px 0px 20px 40px;
 }
 .category_choice .custom_checkbox .text_checkbox{
-    font-size:24px;
+    font-size:18px;
 }
 
 
@@ -145,9 +163,9 @@ a{
     color:white;
     width:120px;
     height:40px;
-    margin-left:350px;
-    margin-top:20px;
+    margin: 20px 0 50px 350px;
     font-size:24px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 576px) {
