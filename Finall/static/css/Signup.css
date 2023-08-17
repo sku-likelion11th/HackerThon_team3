@@ -1,0 +1,281 @@
+/* basic option */
+body {
+    background-color: #033075;
+}
+.display-container{
+    max-width: 1200px;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header section */
+.headerpart {
+    display: flex;
+}
+.login_header {
+    color: white;
+    font-size: 100px;
+    font-weight: 550;
+    margin-top: 180px;
+}
+.login_subheader {
+    color: white;
+    font-size: 15px;
+    margin-left: 20px;
+}
+/* Btn section */
+.Btn_section {
+    margin-left: 20px;
+}
+.Btn_section button {
+    width: 260px;
+    height: 50px;
+    background-color: inherit;
+    border: 2px solid white;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: start;
+    padding: 0 20px;
+}
+.SUBtn:hover {
+    background-color: white;
+    color: #033075;
+    font-weight: 600;
+}
+.NMBtn:hover {
+    background-color: white;
+    color: #033075;
+    font-weight: 600;
+}
+
+/* tool-part */
+.login_tool {
+    width: 350px;
+    margin-left: 350px;
+    margin-top: 100px;
+}
+.login_border {
+    border: 5px solid transparent;
+    background-image: linear-gradient(#032964, #032964), linear-gradient(to right, #fbfcb9be, #ffcdf3aa, #65d3ffaa);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    width: 350px;
+    height: 550px;
+    border-radius: 15px;
+    box-shadow: -5px 5px 7px 
+}
+.tool_header p {
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    margin: 80px 0 0 30px;
+}
+.tool_subheader p {
+    font-size: 15px;
+    color: white;
+    font-weight: 400;
+    margin: 0 0 0 30px;
+}
+input::placeholder {
+    font-size: 12px;
+    color: white;
+}
+.tool_email {
+    margin: 7px 0 0 30px;
+}
+.tool_email input {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 4px 10px;
+    width: 280px;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+}
+.tool_name {
+    margin: 15px 0 0 30px;
+}
+.tool_name input {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 4px 10px;
+    width: 280px;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+}
+.tool_password {
+    margin: 15px 0 0 30px;
+}
+.tool_password input {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 4px 10px;
+    width: 280px;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+}
+.tool_pwcheck {
+    margin: 15px 0 0 30px;
+}
+.tool_pwcheck input {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 4px 10px;
+    width: 280px;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+}
+.tool_loginBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.tool_loginBtn button {
+    background: linear-gradient( to right, #2e4cee, #030e74 );
+    padding: 8px; 
+    border-radius: 10px !important;
+    border: none;
+    font-size: 17px;
+    width: 280px;
+    color: white;
+    filter: drop-shadow(2px 2px 3px #000000);
+}
+.tool_loginBtn p {
+    margin-bottom: 0 !important;
+}
+.tool_line {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: #4c4c4c;
+    margin: 10px 0 0 0;
+    font-weight: 600;
+}
+.tool_line:before {
+    content: "";
+    flex-grow: 1;
+    margin: 0 15px 0 30px;
+    background: #4c4c4c;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+}
+.tool_line::after {
+    content: "";
+    flex-grow: 1;
+    margin: 0 30px 0 15px;
+    background: #4c4c4c;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+}
+.tool_line p {
+    margin-bottom: 7px;
+}
+.tool_icon {
+    display: flex;
+    justify-content: center;
+}
+.tool_icon div {
+    margin: 0 5px 0 5px;
+}
+
+/* 에러 메시지 위치 조절 */
+.login_alert {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+/* 에러 메시지 크기 및 스타일 조절 */
+.login_alert .alert {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+
+    /* 크기 조절 (변경을 원하시면 수정) */
+    min-width: 300px;
+    min-height: 40px;
+    max-width: 1000px;
+    max-height: 1000px;
+
+    text-align: center;
+    font-size: 16px;
+}
+
+.signBtn{
+    display:none;
+}
+.tool_logo {
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .header_section{
+        display: none;
+    }
+    /* tool-part */
+    .login_tool{
+        display: grid;
+        top:105px;
+        margin-left: 0;
+    }
+    /* tool-part */
+    .tool_logo {
+        display: block;
+    }
+    .tool_logo img {
+        width: 250px;
+        margin: 20px 0 0 20px;
+    }
+    .tool_header p{
+        margin-top: 15px;
+    }
+    .tool_checkbox span{
+        font-size:12px;
+    }
+    .tool_loginBtn{
+        margin-top:10px;
+    }
+
+    /* display none >> login_subheader */
+    .login_subheader{
+        display:none;
+    }
+
+    /* display none >> signup btn */
+    .SignUpBtn{
+        display:none;
+    }
+    .notmemberBtn{
+        display:none;
+    }
+
+    
+    /*new sign*/
+    .signBtn{
+        display:flex;
+        justify-content: space-around;
+        margin-top: 15px;
+    }
+    .signBtn p a{
+        text-decoration: none;
+        font-size:14px;
+        color:white;
+    }
+    .signBtn p a:active{
+        text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+        
+    }
+
+}

@@ -1,0 +1,70 @@
+body {
+    background-color: #033075;
+}
+.display-container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.headerpart {
+    position: relative;
+}
+.login_header {
+    display: flex;
+    position: absolute;
+    color: white;
+    font-size: 100px;
+    font-weight: 550;
+    margin-top: 230px;
+    margin-left: 200px;
+}
+.login_subheader {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: 380px;
+    margin-left: 210px;
+}
+.login_img .creditcard {
+    position: absolute;
+    width: 800px;
+    top: 60px;
+}
+.login_img {
+    display: flex;
+    justify-content: center;
+    margin-left: 1000px;
+}
+.loginBtn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 220px;
+}
+.loginBtn button {
+    padding: 10px 90px 10px 10px;
+    background-color: #033075;
+    color: white;
+    border: white solid 2px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 450px;
+}
+.notmemberBtn {
+    display: flex;
+    flex-direction: column;
+    margin-left: 220px;
+}
+.notmemberBtn button {
+    padding: 10px 54px 10px 10px;
+    background-color: #033075;
+    color: white;
+    border: white solid 2px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+button:hover {
+    color: #033075;
+    background-color: white;
+
+}

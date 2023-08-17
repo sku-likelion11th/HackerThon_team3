@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="CW.css">
+    <script src="https://kit.fontawesome.com/855cb859ed.js" crossorigin="anonymous"></script><!-- font awesome 연결링크 -->
+    <script src="./CW.js" defer></script>
+    <title>맞춤상담 - FINALL</title>
+</head>
+<body class="gangwon-font">
+    <div class="display-container">
+        <!-- navigation section -->
+        <nav class="navbar fixed-top d-flex justify-content-between align-items-center">
+            <div class="navbar_logo">
+                <a href="../../main/index.html"><img src="../../img/logo.png" alt="브랜드로고"></a>
+            </div>
+            <ul class="navbar_menu">
+                <li><a href="../../Education/Education.html">맞춤교육</a></li>
+                <li><a href="../../Benefit/Benefit.html">맞춤혜택</a></li>
+                <li><a href="../../Consult/Consult.html">맞춤상담</a></li>
+            </ul>
+            <ul class="navbar_login">
+                <li><a href="#">로그인<i class="fa-regular fa-user"></i></a></li>
+            </ul>
+            <a href="#" class="navbar_toggleBtn"><i class="fa-solid fa-bars"></i></a>
+        </nav>
+        <!-- content section -->
+        <div class="content_section">
+            <div class="content_header">
+                <p>전문 상담가에게 물어보세요.</p>
+            </div>
+            <div class="content_tool">
+                <div class="tool_header">
+                    <p>제목</p>
+                </div>
+                <div class="tool_text">
+                    <input type="text" placeholder="물음표로 끝나는 질문으로 작성해주세요.">
+                </div>
+                <div class="tool_question_header">
+                    <p>질문</p>
+                </div>
+                <div class="tool_question_text">
+                    <form action="#">
+                        <fieldset><textarea name="글작성" id="#" cols="70" rows="6" placeholder="질문을 입력해주세요. (최대 500자)"></textarea></fieldset>
+                    </form>
+                </div>
+                <div class="tool_category_header">
+                    <p>카테고리</p>
+                </div>
+                <div class="tool_category">
+                    <section class="optional">
+                        <select id="ed_target">
+                            <option>서비스 분류</option>
+                            <option value="">개인/가구</option>
+                            <option value="">소상공인</option>
+                            <option value="">법인</option>
+                        </select>
+                    </section>
+                    <section class="optional">
+                        <select id="ed_field">
+                            <option>전체</option>
+                            <option value="">부채관리</option>
+                            <option value="">신용관리</option>
+                            <option value="">재무설계</option>
+                            <option value="">소비저축</option>
+                            <option value="">위험관리</option>
+                            <option value="">소비생활</option>
+                        </select>
+                    </section>
+                </div>
+                <div class="tool_operate">
+                    <div class="operate_header">
+                        <p>맞춤 상담은 이렇게 운영돼요.</p>
+                    </div>
+                    <div class="operate_list">
+                        <ul style="color: #9d9d9d;">
+                            <li>폭력적/공격적인 글, 서비스 목적과 맞지 않는 질문은 예고 없이 삭제될 수 있어요.</li>
+                            <li>서비스 운영을 방해하는 행위가 반복적으로 발생할 경우, 영구적으로 사전 안내 없이 제한될 수 있어요.</li>
+                            <li>답변은 경제적 판단이나 거래 행위로 해석될 수 없으며, FINALL과 전문 상담진은 이로 인해 발생하는 어떠한 책임도 지지 않아요.</li>
+                            <li>맞춤 상담에 등록하신 질문은 고객센터를 통한 삭제 요청이 없는 한 지속적으로 남게 돼요.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tool_questionBtn">
+            <button>물어보기</button>
+        </div>
+    </div>
+</body>
+</html>

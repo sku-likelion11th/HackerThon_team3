@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'GangwonState';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/GangwonState.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.gangwon-font {
+    font-family: 'GangwonState', sans-serif;
+}
+.display-container{
+    margin: auto;
+    max-width: 800px;   
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100vh;
+    border-left: 1px solid #9d9d9d;
+    border-right: 1px solid #9d9d9d;
+    border-bottom: 1px solid #9d9d9d;
+}
+a {
+    text-decoration: none;
+}
+
+/* navbar section */
+.navbar {
+    background-color: #033075;
+    padding: 8px 12px;
+}
+.navbar_logo img {
+    width: 130px;
+    height: 25px;
+    margin-left: 15px;
+}
+.navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: 90px;
+}
+.navbar_menu li {
+    padding: 8px 12px;
+}
+.navbar a {
+    color: white;
+}
+.navbar_menu li:hover {
+    background-color: #f0f4f5;
+    border-radius: 4px;
+}
+.navbar_menu li:hover > a {
+    color: #033075;
+}
+.navbar_login {
+    list-style: none;
+    color: #f0f4f5;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-size: 12px;
+}
+.navbar_login li:hover {
+    background-color: #f0f4f5;
+    border-radius: 4px;
+    padding: 8px 4px;
+}
+.navbar_login li:hover > a {
+    color: #033075;
+}
+.navbar_login i{
+    padding-left: 5px;
+}
+.navbar_toggleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 20px;
+    color: #d49466  ;
+}
+.navbar_toggleBtn:hover i:hover {
+    color: #f0f4f5;
+}
+
+/* content section */
+.content_section {
+    margin-top: 56px;
+    margin-left: 40px;
+}
+.header_section .header {
+    padding-top: 50px;
+}
+.header p {
+    font-size: 30px;
+}
+.writer p {
+    font-size: 14px;
+    color: #9d9d9d;
+    width: 55px;
+    padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.incontent p {
+    color: #565c65;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 8px 16px;
+}
+.content_section .line {
+    border: 1px solid #9d9d9d;
+    margin-right: 40px;
+}
+
+/* answer write section */
+.writeBtn {
+    display: flex;
+    margin: 10px 50px 10px 0;
+    justify-content: end;
+}
+.writeBtn button {
+    color: white;
+    background-color: #033075;
+    font-size: 14px;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 80px;
+    height: 35px;
+}
+textarea {
+    resize: none;
+    padding: 8px 16px;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+.answer_write_tool {
+    margin-bottom: 10px;
+}
+
+/* answer section */
+.answer_section {
+    background-color: #e2edff;
+    border-radius: 3px;
+    margin-right: 40px;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+.outsideheader {
+    font-size: 24px;
+}
+.answer_tool {
+    border: 1px solid #9d9d9d;
+    border-radius: 5px;
+}
+.tool_name {
+    background-color: #f1f3f6;
+    border-radius: 5px 5px 0 0;
+    color: #565c65;
+    padding: 8px 16px;
+}
+.tool_name p {
+    margin-bottom: 0;
+}
+.tool_content {
+    color: #565c65;
+    padding: 8px 16px;
+}
+.tool_content p {
+    margin-bottom: 0;
+}
+
+
+
+
+
+@media screen and (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_login {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar_toggleBtn{
+        display: block;
+    }
+    .navbar_menu.active, .navbar_login.active {
+        display: flex;
+    }
+}
