@@ -5,50 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=w, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="{% static 'js/Signup.js' %}" defer></script>
     <link rel="stylesheet" href="{% static 'css/Signup.css' %}">
+    <script src="{% static 'js/Signup.js' %}" defer></script>
     <script src="https://kit.fontawesome.com/855cb859ed.js" crossorigin="anonymous"></script><!-- font awesome 연결링크 -->
     <title>FINALL SignUp</title>
-    <style>
-        .error {
-            color: red;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const loginForm = document.querySelector("#login-form"); // 폼 요소의 ID 지정
-    
-            loginForm.addEventListener("submit", async function (event) {
-                event.preventDefault();
-    
-                const csrfToken = document.getElementsByName("csrfmiddlewaretoken")[0].value;
-                const formData = new FormData(loginForm);
-    
-                try {
-                    const response = await fetch(loginUrl, {
-                        method: "POST",
-                        headers: {
-                            "X-CSRFToken": csrfToken,
-                        },
-                        body: formData,
-                    });
-    
-                    if (response.ok) {
-                        // 로그인 성공 시 원하는 페이지로 이동
-                        window.location.href = "/posts/";
-                    } else {
-                        const errorMessage = document.querySelector(".response-message");
-    
-                        errorMessage.innerText = "잘못된 아이디나 패스워드입니다.";
-                        errorMessage.classList.add("error");
-                        errorMessage.classList.remove("success");
-                    }
-                } catch (error) {
-                    console.error("Error while logging in:", error);
-                }
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="display-container">
@@ -90,7 +50,7 @@
                     <div class="tool_subheader">
                         <p>Just some details to get you in..!</p>
                     </div>
-                    <form method="post" onsubmit="return checkPasswords();">
+                    <form class="tool_form" method="post" onsubmit="return checkPasswords();">
                         {% csrf_token %}
                         <div class="tool_email">
                             <input type="email" name="email" placeholder="이메일 입력해주세요." required autofocus>                        

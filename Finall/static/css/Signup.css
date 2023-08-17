@@ -134,12 +134,12 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 .tool_loginBtn button {
     background: linear-gradient( to right, #2e4cee, #030e74 );
     padding: 8px; 
-    border-radius: 10px !important;
+    border-radius: 10px;
     border: none;
     font-size: 17px;
     width: 280px;
@@ -147,7 +147,7 @@ input::placeholder {
     filter: drop-shadow(2px 2px 3px #000000);
 }
 .tool_loginBtn p {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
 }
 .tool_line {
     display: flex;
