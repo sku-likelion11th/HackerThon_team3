@@ -302,12 +302,14 @@ a {
     .content_section .line{
         width:480px;
         margin-left:48px;
+        margin:0px auto 0px;
     }
 
     /* tap section */
     .tab{
-        margin-left:30px;
-        width:500px;
+        margin:50px auto 0px;
+
+        width:480px;
         height:60px;
     }
     .tabcontent{
